@@ -1,58 +1,192 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="333ba2cf-787d-4e27-9bcf-101576b43844" name="@d47e96e17b5c 2025-12-23 07:13:43" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2025-12-23T07:13:43.6205711+00:00" queuing="2025-12-23T07:13:43.6205712+00:00" start="2025-12-23T07:13:41.9194114+00:00" finish="2025-12-23T07:13:44.7538838+00:00" />
-  <TestSettings name="default" id="167482b9-5dfa-45d7-b69e-6342fd4b731b">
-    <Deployment runDeploymentRoot="_d47e96e17b5c_2025-12-23_07_13_43" />
+<TestRun id="90ce1256-7551-416c-96ab-c34d8e461e90" name="@6ad505fb191f 2025-12-23 07:14:24" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-12-23T07:14:24.8152327+00:00" queuing="2025-12-23T07:14:24.8152328+00:00" start="2025-12-23T07:14:18.5208106+00:00" finish="2025-12-23T07:14:36.2427211+00:00" />
+  <TestSettings name="default" id="38f2b55f-031a-4d0b-8974-f5de9e73d11a">
+    <Deployment runDeploymentRoot="_6ad505fb191f_2025-12-23_07_14_24" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="4297a5b1-0fe0-457d-89a4-1b3bbfbf2f88" testId="ae92b16a-844b-d611-185f-2bc026fcfbb4" testName="Playwright.Tests.Tests.HelloPageTests.HelloPage_ShouldDisplay_HelloMessage_InParagraph" computerName="d47e96e17b5c" duration="00:00:00.6019766" startTime="2025-12-23T07:13:43.1722452+00:00" endTime="2025-12-23T07:13:43.1722507+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4297a5b1-0fe0-457d-89a4-1b3bbfbf2f88" />
-    <UnitTestResult executionId="11a464b7-3acb-4e59-b695-49f522c70bca" testId="b40f3be5-8ee0-948c-5e44-6b1dcce4304f" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldLoad_Quickly_UsingPOM" computerName="d47e96e17b5c" duration="00:00:00.5550298" startTime="2025-12-23T07:13:44.6729246+00:00" endTime="2025-12-23T07:13:44.6729247+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11a464b7-3acb-4e59-b695-49f522c70bca" />
-    <UnitTestResult executionId="81321477-82bc-41ef-9b2f-ab660216b0ea" testId="9d291ace-2979-98d8-7bff-ed1e49fa2685" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldHave_ParagraphText_UsingPOM" computerName="d47e96e17b5c" duration="00:00:00.5519274" startTime="2025-12-23T07:13:43.9279594+00:00" endTime="2025-12-23T07:13:43.9279595+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81321477-82bc-41ef-9b2f-ab660216b0ea" />
-    <UnitTestResult executionId="47ff411b-bd4d-4255-af95-4752b7432393" testId="0f380e9a-f364-219b-c417-3cd54416ad3a" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldDisplay_HelloMessage_UsingPOM" computerName="d47e96e17b5c" duration="00:00:00.6020052" startTime="2025-12-23T07:13:43.1750466+00:00" endTime="2025-12-23T07:13:43.1750466+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47ff411b-bd4d-4255-af95-4752b7432393" />
+    <UnitTestResult executionId="6f134b0b-a55d-414e-b639-d517b25adf29" testId="9d291ace-2979-98d8-7bff-ed1e49fa2685" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldHave_ParagraphText_UsingPOM" computerName="6ad505fb191f" duration="00:00:05.5855477" startTime="2025-12-23T07:14:30.4804159+00:00" endTime="2025-12-23T07:14:30.4804160+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f134b0b-a55d-414e-b639-d517b25adf29">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.Playwright.PlaywrightException : Locator expected to contain text 'Hello World'
+But was: 'Hello Hark' 
+Call log:
+  - Expect "ToContainTextAsync" with timeout 5000ms
+  - waiting for GetByRole(AriaRole.Paragraph)
+    9 × locator resolved to &lt;p class="text-2xl font-semibold text-black dark:text-white"&gt;Hello Hark&lt;/p&gt;
+      - unexpected value "Hello Hark"</Message>
+          <StackTrace>   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message, String title) in /_/src/Playwright/Core/AssertionsBase.cs:line 92
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 66
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 58
+   at Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldHave_ParagraphText_UsingPOM() in /app/Tests/HelloPageWithPOMTests.cs:line 44
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9f5bfeff-ea35-48ea-95ab-6d2ab045018f" testId="ae92b16a-844b-d611-185f-2bc026fcfbb4" testName="Playwright.Tests.Tests.HelloPageTests.HelloPage_ShouldDisplay_HelloMessage_InParagraph" computerName="6ad505fb191f" duration="00:00:05.6204238" startTime="2025-12-23T07:14:24.7897580+00:00" endTime="2025-12-23T07:14:24.7897663+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f5bfeff-ea35-48ea-95ab-6d2ab045018f">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.Playwright.PlaywrightException : Locator expected to contain text 'Hello World'
+But was: 'Hello Hark' 
+Call log:
+  - Expect "ToContainTextAsync" with timeout 5000ms
+  - waiting for GetByRole(AriaRole.Paragraph)
+    9 × locator resolved to &lt;p class="text-2xl font-semibold text-black dark:text-white"&gt;Hello Hark&lt;/p&gt;
+      - unexpected value "Hello Hark"</Message>
+          <StackTrace>   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message, String title) in /_/src/Playwright/Core/AssertionsBase.cs:line 92
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 66
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 58
+   at Playwright.Tests.Tests.HelloPageTests.HelloPage_ShouldDisplay_HelloMessage_InParagraph() in /app/Tests/HelloPageTests.cs:line 18
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0d199da4-b3e6-4f48-be70-bac93ed04cd8" testId="b40f3be5-8ee0-948c-5e44-6b1dcce4304f" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldLoad_Quickly_UsingPOM" computerName="6ad505fb191f" duration="00:00:05.5737056" startTime="2025-12-23T07:14:36.1340811+00:00" endTime="2025-12-23T07:14:36.1340812+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d199da4-b3e6-4f48-be70-bac93ed04cd8">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.Playwright.PlaywrightException : Locator expected to contain text 'Hello World'
+But was: 'Hello Hark' 
+Call log:
+  - Expect "ToContainTextAsync" with timeout 5000ms
+  - waiting for GetByRole(AriaRole.Paragraph)
+    9 × locator resolved to &lt;p class="text-2xl font-semibold text-black dark:text-white"&gt;Hello Hark&lt;/p&gt;
+      - unexpected value "Hello Hark"</Message>
+          <StackTrace>   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message, String title) in /_/src/Playwright/Core/AssertionsBase.cs:line 92
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 66
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 58
+   at Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldLoad_Quickly_UsingPOM() in /app/Tests/HelloPageWithPOMTests.cs:line 59
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7df7e780-dc2f-42c4-a9c3-17f6dc37f83c" testId="0f380e9a-f364-219b-c417-3cd54416ad3a" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldDisplay_HelloMessage_UsingPOM" computerName="6ad505fb191f" duration="00:00:05.6203918" startTime="2025-12-23T07:14:24.7942744+00:00" endTime="2025-12-23T07:14:24.7942745+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7df7e780-dc2f-42c4-a9c3-17f6dc37f83c">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.Playwright.PlaywrightException : Locator expected to contain text 'Hello World'
+But was: 'Hello Hark' 
+Call log:
+  - Expect "ToContainTextAsync" with timeout 5000ms
+  - waiting for GetByRole(AriaRole.Paragraph)
+    9 × locator resolved to &lt;p class="text-2xl font-semibold text-black dark:text-white"&gt;Hello Hark&lt;/p&gt;
+      - unexpected value "Hello Hark"</Message>
+          <StackTrace>   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message, String title) in /_/src/Playwright/Core/AssertionsBase.cs:line 92
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 66
+   at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, String title, FrameExpectOptions options) in /_/src/Playwright/Core/AssertionsBase.cs:line 58
+   at Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldDisplay_HelloMessage_UsingPOM() in /app/Tests/HelloPageWithPOMTests.cs:line 31
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
   </Results>
   <TestDefinitions>
     <UnitTest name="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldHave_ParagraphText_UsingPOM" storage="/app/bin/release/net9.0/playwright.tests.dll" id="9d291ace-2979-98d8-7bff-ed1e49fa2685">
-      <Execution id="81321477-82bc-41ef-9b2f-ab660216b0ea" />
+      <Execution id="6f134b0b-a55d-414e-b639-d517b25adf29" />
       <TestMethod codeBase="/app/bin/Release/net9.0/Playwright.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Playwright.Tests.Tests.HelloPageWithPOMTests" name="HelloPage_ShouldHave_ParagraphText_UsingPOM" />
     </UnitTest>
     <UnitTest name="Playwright.Tests.Tests.HelloPageTests.HelloPage_ShouldDisplay_HelloMessage_InParagraph" storage="/app/bin/release/net9.0/playwright.tests.dll" id="ae92b16a-844b-d611-185f-2bc026fcfbb4">
-      <Execution id="4297a5b1-0fe0-457d-89a4-1b3bbfbf2f88" />
+      <Execution id="9f5bfeff-ea35-48ea-95ab-6d2ab045018f" />
       <TestMethod codeBase="/app/bin/Release/net9.0/Playwright.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Playwright.Tests.Tests.HelloPageTests" name="HelloPage_ShouldDisplay_HelloMessage_InParagraph" />
     </UnitTest>
     <UnitTest name="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldDisplay_HelloMessage_UsingPOM" storage="/app/bin/release/net9.0/playwright.tests.dll" id="0f380e9a-f364-219b-c417-3cd54416ad3a">
-      <Execution id="47ff411b-bd4d-4255-af95-4752b7432393" />
+      <Execution id="7df7e780-dc2f-42c4-a9c3-17f6dc37f83c" />
       <TestMethod codeBase="/app/bin/Release/net9.0/Playwright.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Playwright.Tests.Tests.HelloPageWithPOMTests" name="HelloPage_ShouldDisplay_HelloMessage_UsingPOM" />
     </UnitTest>
     <UnitTest name="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldLoad_Quickly_UsingPOM" storage="/app/bin/release/net9.0/playwright.tests.dll" id="b40f3be5-8ee0-948c-5e44-6b1dcce4304f">
-      <Execution id="11a464b7-3acb-4e59-b695-49f522c70bca" />
+      <Execution id="0d199da4-b3e6-4f48-be70-bac93ed04cd8" />
       <TestMethod codeBase="/app/bin/Release/net9.0/Playwright.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Playwright.Tests.Tests.HelloPageWithPOMTests" name="HelloPage_ShouldLoad_Quickly_UsingPOM" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="ae92b16a-844b-d611-185f-2bc026fcfbb4" executionId="4297a5b1-0fe0-457d-89a4-1b3bbfbf2f88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b40f3be5-8ee0-948c-5e44-6b1dcce4304f" executionId="11a464b7-3acb-4e59-b695-49f522c70bca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9d291ace-2979-98d8-7bff-ed1e49fa2685" executionId="81321477-82bc-41ef-9b2f-ab660216b0ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0f380e9a-f364-219b-c417-3cd54416ad3a" executionId="47ff411b-bd4d-4255-af95-4752b7432393" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9d291ace-2979-98d8-7bff-ed1e49fa2685" executionId="6f134b0b-a55d-414e-b639-d517b25adf29" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae92b16a-844b-d611-185f-2bc026fcfbb4" executionId="9f5bfeff-ea35-48ea-95ab-6d2ab045018f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b40f3be5-8ee0-948c-5e44-6b1dcce4304f" executionId="0d199da4-b3e6-4f48-be70-bac93ed04cd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f380e9a-f364-219b-c417-3cd54416ad3a" executionId="7df7e780-dc2f-42c4-a9c3-17f6dc37f83c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
-  <ResultSummary outcome="Completed">
-    <Counters total="4" executed="4" passed="4" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  <ResultSummary outcome="Failed">
+    <Counters total="4" executed="4" passed="0" failed="4" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
       <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 9.0.11)
 [xUnit.net 00:00:00.02]   Discovering: Playwright.Tests
 [xUnit.net 00:00:00.03]   Discovered:  Playwright.Tests
 [xUnit.net 00:00:00.03]   Starting:    Playwright.Tests
-[xUnit.net 00:00:02.56]   Finished:    Playwright.Tests
+[xUnit.net 00:00:05.93]       Microsoft.Playwright.PlaywrightException : Locator expected to contain text 'Hello World'
+[xUnit.net 00:00:05.93]       But was: 'Hello Hark' 
+[xUnit.net 00:00:05.93]       Call log:
+[xUnit.net 00:00:05.93]         - Expect "ToContainTextAsync" with timeout 5000ms
+[xUnit.net 00:00:05.93]         - waiting for GetByRole(AriaRole.Paragraph)
+[xUnit.net 00:00:05.93]           9 × locator resolved to &lt;p class="text-2xl font-semibold text-black dark:text-white"&gt;Hello Hark&lt;/p&gt;
+[xUnit.net 00:00:05.93]             - unexpected value "Hello Hark"
+[xUnit.net 00:00:05.93]       Stack Trace:
+[xUnit.net 00:00:05.93]         /_/src/Playwright/Core/AssertionsBase.cs(92,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message, String title)
+[xUnit.net 00:00:05.93]         /_/src/Playwright/Core/AssertionsBase.cs(66,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, String title, FrameExpectOptions options)
+[xUnit.net 00:00:05.93]         /_/src/Playwright/Core/AssertionsBase.cs(58,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, String title, FrameExpectOptions options)
+[xUnit.net 00:00:05.93]         /app/Tests/HelloPageTests.cs(18,0): at Playwright.Tests.Tests.HelloPageTests.HelloPage_ShouldDisplay_HelloMessage_InParagraph()
+[xUnit.net 00:00:05.93]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:05.94]       Microsoft.Playwright.PlaywrightException : Locator expected to contain text 'Hello World'
+[xUnit.net 00:00:05.94]       But was: 'Hello Hark' 
+[xUnit.net 00:00:05.94]       Call log:
+[xUnit.net 00:00:05.94]         - Expect "ToContainTextAsync" with timeout 5000ms
+[xUnit.net 00:00:05.94]         - waiting for GetByRole(AriaRole.Paragraph)
+[xUnit.net 00:00:05.94]           9 × locator resolved to &lt;p class="text-2xl font-semibold text-black dark:text-white"&gt;Hello Hark&lt;/p&gt;
+[xUnit.net 00:00:05.94]             - unexpected value "Hello Hark"
+[xUnit.net 00:00:05.94]       Stack Trace:
+[xUnit.net 00:00:05.94]         /_/src/Playwright/Core/AssertionsBase.cs(92,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message, String title)
+[xUnit.net 00:00:05.94]         /_/src/Playwright/Core/AssertionsBase.cs(66,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, String title, FrameExpectOptions options)
+[xUnit.net 00:00:05.94]         /_/src/Playwright/Core/AssertionsBase.cs(58,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, String title, FrameExpectOptions options)
+[xUnit.net 00:00:05.94]         /app/Tests/HelloPageWithPOMTests.cs(31,0): at Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldDisplay_HelloMessage_UsingPOM()
+[xUnit.net 00:00:05.94]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:11.62]       Microsoft.Playwright.PlaywrightException : Locator expected to contain text 'Hello World'
+[xUnit.net 00:00:11.62]       But was: 'Hello Hark' 
+[xUnit.net 00:00:11.62]       Call log:
+[xUnit.net 00:00:11.62]         - Expect "ToContainTextAsync" with timeout 5000ms
+[xUnit.net 00:00:11.62]         - waiting for GetByRole(AriaRole.Paragraph)
+[xUnit.net 00:00:11.62]           9 × locator resolved to &lt;p class="text-2xl font-semibold text-black dark:text-white"&gt;Hello Hark&lt;/p&gt;
+[xUnit.net 00:00:11.62]             - unexpected value "Hello Hark"
+[xUnit.net 00:00:11.62]       Stack Trace:
+[xUnit.net 00:00:11.62]         /_/src/Playwright/Core/AssertionsBase.cs(92,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message, String title)
+[xUnit.net 00:00:11.62]         /_/src/Playwright/Core/AssertionsBase.cs(66,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, String title, FrameExpectOptions options)
+[xUnit.net 00:00:11.62]         /_/src/Playwright/Core/AssertionsBase.cs(58,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, String title, FrameExpectOptions options)
+[xUnit.net 00:00:11.63]         /app/Tests/HelloPageWithPOMTests.cs(44,0): at Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldHave_ParagraphText_UsingPOM()
+[xUnit.net 00:00:11.63]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:17.28]       Microsoft.Playwright.PlaywrightException : Locator expected to contain text 'Hello World'
+[xUnit.net 00:00:17.28]       But was: 'Hello Hark' 
+[xUnit.net 00:00:17.28]       Call log:
+[xUnit.net 00:00:17.28]         - Expect "ToContainTextAsync" with timeout 5000ms
+[xUnit.net 00:00:17.28]         - waiting for GetByRole(AriaRole.Paragraph)
+[xUnit.net 00:00:17.28]           9 × locator resolved to &lt;p class="text-2xl font-semibold text-black dark:text-white"&gt;Hello Hark&lt;/p&gt;
+[xUnit.net 00:00:17.28]             - unexpected value "Hello Hark"
+[xUnit.net 00:00:17.28]       Stack Trace:
+[xUnit.net 00:00:17.28]         /_/src/Playwright/Core/AssertionsBase.cs(92,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, FrameExpectOptions expectOptions, Object expected, String message, String title)
+[xUnit.net 00:00:17.28]         /_/src/Playwright/Core/AssertionsBase.cs(66,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue[] expectedText, Object expected, String message, String title, FrameExpectOptions options)
+[xUnit.net 00:00:17.28]         /_/src/Playwright/Core/AssertionsBase.cs(58,0): at Microsoft.Playwright.Core.AssertionsBase.ExpectImplAsync(String expression, ExpectedTextValue textValue, Object expected, String message, String title, FrameExpectOptions options)
+[xUnit.net 00:00:17.28]         /app/Tests/HelloPageWithPOMTests.cs(59,0): at Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldLoad_Quickly_UsingPOM()
+[xUnit.net 00:00:17.28]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:17.28]   Finished:    Playwright.Tests
 </StdOut>
     </Output>
+    <RunInfos>
+      <RunInfo computerName="6ad505fb191f" outcome="Error" timestamp="2025-12-23T07:14:24.7885473+00:00">
+        <Text>[xUnit.net 00:00:05.93]     Playwright.Tests.Tests.HelloPageTests.HelloPage_ShouldDisplay_HelloMessage_InParagraph [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="6ad505fb191f" outcome="Error" timestamp="2025-12-23T07:14:24.7946488+00:00">
+        <Text>[xUnit.net 00:00:05.94]     Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldDisplay_HelloMessage_UsingPOM [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="6ad505fb191f" outcome="Error" timestamp="2025-12-23T07:14:30.4799880+00:00">
+        <Text>[xUnit.net 00:00:11.62]     Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldHave_ParagraphText_UsingPOM [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="6ad505fb191f" outcome="Error" timestamp="2025-12-23T07:14:36.1339420+00:00">
+        <Text>[xUnit.net 00:00:17.28]     Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldLoad_Quickly_UsingPOM [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
     <CollectorDataEntries>
-      <Collector agentName="d47e96e17b5c" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
+      <Collector agentName="6ad505fb191f" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
         <UriAttachments>
           <UriAttachment>
-            <A href="d47e96e17b5c/coverage.opencover.xml"></A>
+            <A href="6ad505fb191f/coverage.opencover.xml"></A>
           </UriAttachment>
         </UriAttachments>
       </Collector>
