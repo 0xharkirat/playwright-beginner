@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="c0450cfd-6d0e-46dc-a53d-098bf2513f80" name="@7b360ac4a15b 2025-12-23 06:37:19" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2025-12-23T06:37:19.1521367+00:00" queuing="2025-12-23T06:37:19.1521367+00:00" start="2025-12-23T06:37:17.4377584+00:00" finish="2025-12-23T06:37:20.4786921+00:00" />
-  <TestSettings name="default" id="cebd55c8-872d-4431-a4e4-f73c63c7c16f">
-    <Deployment runDeploymentRoot="_7b360ac4a15b_2025-12-23_06_37_19" />
+<TestRun id="333ba2cf-787d-4e27-9bcf-101576b43844" name="@d47e96e17b5c 2025-12-23 07:13:43" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-12-23T07:13:43.6205711+00:00" queuing="2025-12-23T07:13:43.6205712+00:00" start="2025-12-23T07:13:41.9194114+00:00" finish="2025-12-23T07:13:44.7538838+00:00" />
+  <TestSettings name="default" id="167482b9-5dfa-45d7-b69e-6342fd4b731b">
+    <Deployment runDeploymentRoot="_d47e96e17b5c_2025-12-23_07_13_43" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="1d766c76-e4fd-457d-ac3b-e8ac7c40f111" testId="b40f3be5-8ee0-948c-5e44-6b1dcce4304f" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldLoad_Quickly_UsingPOM" computerName="7b360ac4a15b" duration="00:00:00.5741844" startTime="2025-12-23T06:37:20.3927362+00:00" endTime="2025-12-23T06:37:20.3927363+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d766c76-e4fd-457d-ac3b-e8ac7c40f111" />
-    <UnitTestResult executionId="00a936b8-7910-4b3d-85af-108a8e116cda" testId="ae92b16a-844b-d611-185f-2bc026fcfbb4" testName="Playwright.Tests.Tests.HelloPageTests.HelloPage_ShouldDisplay_HelloMessage_InParagraph" computerName="7b360ac4a15b" duration="00:00:00.5963951" startTime="2025-12-23T06:37:18.8370008+00:00" endTime="2025-12-23T06:37:18.8370009+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="00a936b8-7910-4b3d-85af-108a8e116cda" />
-    <UnitTestResult executionId="afbb3014-8a08-497f-92c4-bc1609974627" testId="9d291ace-2979-98d8-7bff-ed1e49fa2685" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldHave_ParagraphText_UsingPOM" computerName="7b360ac4a15b" duration="00:00:00.5600581" startTime="2025-12-23T06:37:19.5925104+00:00" endTime="2025-12-23T06:37:19.5925105+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="afbb3014-8a08-497f-92c4-bc1609974627" />
-    <UnitTestResult executionId="989a925a-ddb2-4abe-9bbe-d4b5706791a5" testId="0f380e9a-f364-219b-c417-3cd54416ad3a" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldDisplay_HelloMessage_UsingPOM" computerName="7b360ac4a15b" duration="00:00:00.5964087" startTime="2025-12-23T06:37:18.8238669+00:00" endTime="2025-12-23T06:37:18.8238728+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="989a925a-ddb2-4abe-9bbe-d4b5706791a5" />
+    <UnitTestResult executionId="4297a5b1-0fe0-457d-89a4-1b3bbfbf2f88" testId="ae92b16a-844b-d611-185f-2bc026fcfbb4" testName="Playwright.Tests.Tests.HelloPageTests.HelloPage_ShouldDisplay_HelloMessage_InParagraph" computerName="d47e96e17b5c" duration="00:00:00.6019766" startTime="2025-12-23T07:13:43.1722452+00:00" endTime="2025-12-23T07:13:43.1722507+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4297a5b1-0fe0-457d-89a4-1b3bbfbf2f88" />
+    <UnitTestResult executionId="11a464b7-3acb-4e59-b695-49f522c70bca" testId="b40f3be5-8ee0-948c-5e44-6b1dcce4304f" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldLoad_Quickly_UsingPOM" computerName="d47e96e17b5c" duration="00:00:00.5550298" startTime="2025-12-23T07:13:44.6729246+00:00" endTime="2025-12-23T07:13:44.6729247+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11a464b7-3acb-4e59-b695-49f522c70bca" />
+    <UnitTestResult executionId="81321477-82bc-41ef-9b2f-ab660216b0ea" testId="9d291ace-2979-98d8-7bff-ed1e49fa2685" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldHave_ParagraphText_UsingPOM" computerName="d47e96e17b5c" duration="00:00:00.5519274" startTime="2025-12-23T07:13:43.9279594+00:00" endTime="2025-12-23T07:13:43.9279595+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81321477-82bc-41ef-9b2f-ab660216b0ea" />
+    <UnitTestResult executionId="47ff411b-bd4d-4255-af95-4752b7432393" testId="0f380e9a-f364-219b-c417-3cd54416ad3a" testName="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldDisplay_HelloMessage_UsingPOM" computerName="d47e96e17b5c" duration="00:00:00.6020052" startTime="2025-12-23T07:13:43.1750466+00:00" endTime="2025-12-23T07:13:43.1750466+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47ff411b-bd4d-4255-af95-4752b7432393" />
   </Results>
   <TestDefinitions>
     <UnitTest name="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldHave_ParagraphText_UsingPOM" storage="/app/bin/release/net9.0/playwright.tests.dll" id="9d291ace-2979-98d8-7bff-ed1e49fa2685">
-      <Execution id="afbb3014-8a08-497f-92c4-bc1609974627" />
+      <Execution id="81321477-82bc-41ef-9b2f-ab660216b0ea" />
       <TestMethod codeBase="/app/bin/Release/net9.0/Playwright.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Playwright.Tests.Tests.HelloPageWithPOMTests" name="HelloPage_ShouldHave_ParagraphText_UsingPOM" />
     </UnitTest>
     <UnitTest name="Playwright.Tests.Tests.HelloPageTests.HelloPage_ShouldDisplay_HelloMessage_InParagraph" storage="/app/bin/release/net9.0/playwright.tests.dll" id="ae92b16a-844b-d611-185f-2bc026fcfbb4">
-      <Execution id="00a936b8-7910-4b3d-85af-108a8e116cda" />
+      <Execution id="4297a5b1-0fe0-457d-89a4-1b3bbfbf2f88" />
       <TestMethod codeBase="/app/bin/Release/net9.0/Playwright.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Playwright.Tests.Tests.HelloPageTests" name="HelloPage_ShouldDisplay_HelloMessage_InParagraph" />
     </UnitTest>
     <UnitTest name="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldDisplay_HelloMessage_UsingPOM" storage="/app/bin/release/net9.0/playwright.tests.dll" id="0f380e9a-f364-219b-c417-3cd54416ad3a">
-      <Execution id="989a925a-ddb2-4abe-9bbe-d4b5706791a5" />
+      <Execution id="47ff411b-bd4d-4255-af95-4752b7432393" />
       <TestMethod codeBase="/app/bin/Release/net9.0/Playwright.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Playwright.Tests.Tests.HelloPageWithPOMTests" name="HelloPage_ShouldDisplay_HelloMessage_UsingPOM" />
     </UnitTest>
     <UnitTest name="Playwright.Tests.Tests.HelloPageWithPOMTests.HelloPage_ShouldLoad_Quickly_UsingPOM" storage="/app/bin/release/net9.0/playwright.tests.dll" id="b40f3be5-8ee0-948c-5e44-6b1dcce4304f">
-      <Execution id="1d766c76-e4fd-457d-ac3b-e8ac7c40f111" />
+      <Execution id="11a464b7-3acb-4e59-b695-49f522c70bca" />
       <TestMethod codeBase="/app/bin/Release/net9.0/Playwright.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Playwright.Tests.Tests.HelloPageWithPOMTests" name="HelloPage_ShouldLoad_Quickly_UsingPOM" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="b40f3be5-8ee0-948c-5e44-6b1dcce4304f" executionId="1d766c76-e4fd-457d-ac3b-e8ac7c40f111" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ae92b16a-844b-d611-185f-2bc026fcfbb4" executionId="00a936b8-7910-4b3d-85af-108a8e116cda" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9d291ace-2979-98d8-7bff-ed1e49fa2685" executionId="afbb3014-8a08-497f-92c4-bc1609974627" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0f380e9a-f364-219b-c417-3cd54416ad3a" executionId="989a925a-ddb2-4abe-9bbe-d4b5706791a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae92b16a-844b-d611-185f-2bc026fcfbb4" executionId="4297a5b1-0fe0-457d-89a4-1b3bbfbf2f88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b40f3be5-8ee0-948c-5e44-6b1dcce4304f" executionId="11a464b7-3acb-4e59-b695-49f522c70bca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9d291ace-2979-98d8-7bff-ed1e49fa2685" executionId="81321477-82bc-41ef-9b2f-ab660216b0ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f380e9a-f364-219b-c417-3cd54416ad3a" executionId="47ff411b-bd4d-4255-af95-4752b7432393" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -45,14 +45,14 @@
 [xUnit.net 00:00:00.02]   Discovering: Playwright.Tests
 [xUnit.net 00:00:00.03]   Discovered:  Playwright.Tests
 [xUnit.net 00:00:00.03]   Starting:    Playwright.Tests
-[xUnit.net 00:00:02.74]   Finished:    Playwright.Tests
+[xUnit.net 00:00:02.56]   Finished:    Playwright.Tests
 </StdOut>
     </Output>
     <CollectorDataEntries>
-      <Collector agentName="7b360ac4a15b" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
+      <Collector agentName="d47e96e17b5c" uri="datacollector://microsoft/CoverletCodeCoverage/1.0" collectorDisplayName="XPlat code coverage">
         <UriAttachments>
           <UriAttachment>
-            <A href="7b360ac4a15b/coverage.opencover.xml"></A>
+            <A href="d47e96e17b5c/coverage.opencover.xml"></A>
           </UriAttachment>
         </UriAttachments>
       </Collector>

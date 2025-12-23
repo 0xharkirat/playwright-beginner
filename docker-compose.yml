@@ -35,8 +35,8 @@ services:
 
   ui:
     build:
-      context: .
-      dockerfile: ./ui/Dockerfile
+      context: ./ui
+      dockerfile: Dockerfile
     container_name: ui
     ports:
       - "3000:3000"

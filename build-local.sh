@@ -3,7 +3,7 @@
 
 set -e
 
-echo "🔨 Building Services Locally"
+echo "🔨 Building Services Locally (APIs only)"
 echo "============================="
 echo ""
 
@@ -23,18 +23,6 @@ cd ../..
 echo "✅ Service-Two built"
 echo ""
 
-# Build UI
-echo "📦 Building UI..."
-cd ui
-if [ ! -d "node_modules" ]; then
-    echo "Installing UI dependencies..."
-    pnpm install --frozen-lockfile
-fi
-pnpm run build
-cd ..
-echo "✅ UI built"
-echo ""
-
 echo "============================="
-echo "✅ All services built successfully!"
+echo "✅ All API services built successfully! (UI is built inside Docker)"
 echo ""
