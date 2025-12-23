@@ -1,16 +1,16 @@
 {
-  "dotnet-test-explorer.testProjectPath": "tests/**/*.csproj",
-  "dotnet.defaultSolution": "playwright-beginner.sln",
-  "files.exclude": {
-    "**/bin": true,
-    "**/obj": true,
-    "**/.next": true,
-    "**/node_modules": true
-  },
-  "search.exclude": {
-    "**/bin": true,
-    "**/obj": true,
-    "**/.next": true,
-    "**/node_modules": true
-  }
+    "dotnet-test-explorer.testProjectPath": "tests/**/*.csproj",
+    "dotnet.defaultSolution": "playwright-beginner.sln",
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/.next": true,
+        "**/node_modules": true
+    },
+    "search.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/.next": true,
+        "**/node_modules": true
+    }
 }
