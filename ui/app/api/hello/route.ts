@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export async function GET() {
     try {
         // Server-side: use Docker service name or localhost
-        const serviceOneUrl = process.env.SERVICE_ONE_URL || 'http://localhost:5001';
+        const serviceOneUrl = process.env.SERVICE_ONE_URL || 'http://localhost:5278';
         const response = await fetch(`${serviceOneUrl}/api/Hello`);
 
         if (!response.ok) {

@@ -16,16 +16,12 @@ fi
 echo "✅ Docker is running"
 echo ""
 
-# Build images
-echo "🔨 Building Docker images..."
-docker compose build
-echo "✅ Images built successfully"
-echo ""
-
-# Start services
+# Build and start services (--no-cache ensures code changes are detected)
+echo "🔨 Building services without cache to ensure fresh code..."
+DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 docker compose build --no-cache service-one service-two ui
 echo "🚀 Starting services..."
 docker compose up -d service-one service-two ui
-echo "✅ Services started"
+echo "✅ Services built and started"
 echo ""
 
 # Wait for health checks
@@ -62,6 +58,21 @@ fi
     exit 1
 }
 echo "✅ All services are healthy"
+echo ""
+
+# Debug: Test API responses
+echo "🔍 Testing API Responses..."
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "Service-Two (/api/World):"
+curl -s http://localhost:5002/api/World
+echo ""
+echo "Service-One (/api/Hello):"
+curl -s http://localhost:5001/api/Hello
+echo ""
+echo "UI API Route (/api/hello):"
+curl -s http://localhost:3000/api/hello
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
 # Show service status

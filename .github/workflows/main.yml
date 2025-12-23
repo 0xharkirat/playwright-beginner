@@ -2,9 +2,7 @@ name: 🎭 CI/CD Pipeline with Docker
 
 on:
   push:
-    branches: [main, develop]
-  pull_request:
-    branches: [main, develop]
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
@@ -28,11 +26,12 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build Docker images
+      - name: Build services (no cache for fresh code)
         run: |
-          docker compose build service-one service-two ui playwright-tests
+          docker compose build --no-cache service-one service-two ui
+          docker compose build playwright-tests
 
-      - name: Start services with Docker Compose
+      - name: Start services
         run: |
           docker compose up -d service-one service-two ui
           echo "⏳ Waiting for services to be healthy..."
@@ -64,6 +63,21 @@ jobs:
           '
           docker compose ps
 
+      - name: Debug API responses
+        run: |
+          echo "🔍 Testing API Responses..."
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "Service-Two (/api/World):"
+          curl -s http://localhost:5002/api/World
+          echo ""
+          echo "Service-One (/api/Hello):"
+          curl -s http://localhost:5001/api/Hello
+          echo ""
+          echo "UI API Route (/api/hello):"
+          curl -s http://localhost:3000/api/hello
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
       - name: Run Playwright tests in Docker
         run: |
           docker compose run --rm playwright-tests
@@ -79,13 +93,6 @@ jobs:
               -verbosity:'Info'
           " || echo "Coverage generation skipped"
 
-      - name: Add coverage to PR comment
-        if: always() && github.event_name == 'pull_request'
-        run: |
-          if [ -f coverage-report/SummaryGithub.md ]; then
-            cat coverage-report/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
-          fi
-
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
@@ -94,13 +101,14 @@ jobs:
           path: tests/Playwright.Tests/TestResults/
           retention-days: 30
 
-      - name: Upload coverage report
+      - name: Publish Test Results
+        uses: dorny/test-reporter@v1
         if: always()
-        uses: actions/upload-artifact@v4
         with:
-          name: coverage-report
-          path: coverage-report/
-          retention-days: 30
+          name: 🎭 Playwright Test Results
+          path: tests/Playwright.Tests/TestResults/*.trx
+          reporter: dotnet-trx
+          fail-on-error: true
 
       - name: Show service logs on failure
         if: failure()

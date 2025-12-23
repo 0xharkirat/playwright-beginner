@@ -28,7 +28,7 @@ public class HelloPageWithPOMTests : BaseTest
 
         // Assert - Using the page object's exposed locators
         await Expect(helloPage.ParagraphLocator).ToBeVisibleAsync();
-        await Expect(helloPage.ParagraphLocator).ToContainTextAsync("Hello");
+        await Expect(helloPage.ParagraphLocator).ToContainTextAsync("Hello World");
     }
 
     [Fact]
@@ -41,7 +41,7 @@ public class HelloPageWithPOMTests : BaseTest
         await helloPage.GotoAsync();
 
         // Assert - ✅ Use Expect (auto-waits, retries, better errors)
-        await Expect(helloPage.ParagraphLocator).ToContainTextAsync("Hello");
+        await Expect(helloPage.ParagraphLocator).ToContainTextAsync("Hello World");
         await Expect(helloPage.ParagraphLocator).Not.ToBeEmptyAsync();
     }
 
@@ -56,7 +56,7 @@ public class HelloPageWithPOMTests : BaseTest
 
         // Assert - ✅ Use Expect instead of manual waiting
         await Expect(helloPage.ParagraphLocator).ToBeVisibleAsync();
-        await Expect(helloPage.ParagraphLocator).ToContainTextAsync("Hello");
+        await Expect(helloPage.ParagraphLocator).ToContainTextAsync("Hello World");
     }
 }
 
