@@ -151,12 +151,29 @@ jobs:
 
       - name: Debug - List downloaded artifacts
         run: |
-          echo "📋 Downloaded files structure:"
-          ls -la ui/ || echo "ui/ directory not found"
-          ls -la ui/.next/ || echo "ui/.next/ not found"
-          ls -la ui/node_modules/ || echo "ui/node_modules/ not found"
-          echo "📋 Full workspace structure:"
-          find . -maxdepth 3 -type d | head -50
+          echo "📋 Workspace root contents:"
+          ls -la
+          echo ""
+          echo "📋 Checking for .next in root:"
+          ls -la .next 2>/dev/null || echo ".next not in root"
+          echo ""
+          echo "📋 Checking for node_modules in root:"
+          ls -la node_modules 2>/dev/null | head -20 || echo "node_modules not in root"
+          echo ""
+          echo "📋 ui/ directory contents:"
+          ls -la ui/
+          echo ""
+          echo "📋 Checking for ui/.next:"
+          ls -la ui/.next 2>/dev/null || echo "ui/.next not found"
+          echo ""
+          echo "📋 Checking for ui/node_modules:"
+          ls -la ui/node_modules 2>/dev/null | head -20 || echo "ui/node_modules not found"
+          echo ""
+          echo "📋 Find all .next directories:"
+          find . -name ".next" -type d 2>/dev/null || echo "No .next found"
+          echo ""
+          echo "📋 Service build artifacts:"
+          ls -la src/Service-One/bin/Release/net9.0/publish/ 2>/dev/null || echo "Service-One artifacts not found"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
