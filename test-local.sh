@@ -16,14 +16,6 @@ fi
 echo "✅ Docker is running"
 echo ""
 
-# Build services locally (outside Docker)
-echo "🔨 Building services locally..."
-./build-local.sh
-if [ $? -ne 0 ]; then
-    echo "❌ Failed to build services"
-    exit 1
-fi
-
 # Build and start services (no-cache ensures fresh Docker images)
 echo "🐳 Building Docker images..."
 docker compose build service-one service-two ui

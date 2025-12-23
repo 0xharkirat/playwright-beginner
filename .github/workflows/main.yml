@@ -16,111 +16,16 @@ permissions:
 
 jobs:
   # ========================================
-  # Build Service-One
-  # ========================================
-  build-service-one:
-    name: 🔨 Build Service-One
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Cache NuGet packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.nuget/packages
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "9.0.x"
-
-      - name: Restore dependencies
-        run: dotnet restore src/Service-One/Service-One.csproj
-
-      - name: Build
-        run: dotnet build src/Service-One/Service-One.csproj -c Release --no-restore
-
-      - name: Publish
-        run: dotnet publish src/Service-One/Service-One.csproj -c Release --no-build -o src/Service-One/bin/Release/net9.0/publish
-
-      - name: Upload Service-One artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: service-one
-          path: src/Service-One/bin/Release/net9.0/publish/
-          retention-days: 1
-
-  # ========================================
-  # Build Service-Two
-  # ========================================
-  build-service-two:
-    name: 🔨 Build Service-Two
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Cache NuGet packages
-        uses: actions/cache@v4
-        with:
-          path: ~/.nuget/packages
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
-          restore-keys: |
-            ${{ runner.os }}-nuget-
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "9.0.x"
-
-      - name: Restore dependencies
-        run: dotnet restore src/Service-Two/Service-Two.csproj
-
-      - name: Build
-        run: dotnet build src/Service-Two/Service-Two.csproj -c Release --no-restore
-
-      - name: Publish
-        run: dotnet publish src/Service-Two/Service-Two.csproj -c Release --no-build -o src/Service-Two/bin/Release/net9.0/publish
-
-      - name: Upload Service-Two artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: service-two
-          path: src/Service-Two/bin/Release/net9.0/publish/
-          retention-days: 1
-
-  # ========================================
   # E2E Tests with Docker
   # ========================================
   e2e-tests:
     name: 🎭 E2E Tests
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    needs: [build-service-one, build-service-two]
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Download Service-One artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: service-one
-          path: src/Service-One/bin/Release/net9.0/publish/
-
-      - name: Download Service-Two artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: service-two
-          path: src/Service-Two/bin/Release/net9.0/publish/
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -224,6 +129,9 @@ jobs:
     if: always()
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Download test results artifact
         uses: actions/download-artifact@v4
         with:
