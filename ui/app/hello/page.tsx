@@ -10,12 +10,13 @@ export default function HelloPage() {
     useEffect(() => {
         async function fetchHello() {
             try {
-                const response = await fetch("http://localhost:5278/api/Hello");
+                // Call our Next.js API route (server-side)
+                const response = await fetch("/api/hello");
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                const data = await response.text();
-                setMessage(data);
+                const data = await response.json();
+                setMessage(data.message);
             } catch (err) {
                 setError(err instanceof Error ? err.message : "Failed to fetch");
             } finally {

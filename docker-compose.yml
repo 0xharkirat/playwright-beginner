@@ -1,0 +1,83 @@
+services:
+  service-one:
+    build:
+      context: ./src/Service-One
+      dockerfile: Dockerfile
+    container_name: service-one
+    ports:
+      - "5001:5001"
+    networks:
+      - app-network
+    environment:
+      - ServiceTwo__BaseUrl=http://service-two:5002
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5001/swagger/index.html"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  service-two:
+    build:
+      context: ./src/Service-Two
+      dockerfile: Dockerfile
+    container_name: service-two
+    ports:
+      - "5002:5002"
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5002/swagger/index.html"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    container_name: ui
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    environment:
+      - SERVICE_ONE_URL=http://service-one:5001
+      - SERVICE_TWO_URL=http://service-two:5002
+    depends_on:
+      - service-one
+      - service-two
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # Playwright tests service (used in CI)
+  playwright-tests:
+    build:
+      context: ./tests/Playwright.Tests
+      dockerfile: Dockerfile
+    container_name: playwright-tests
+    networks:
+      - app-network
+    depends_on:
+      service-one:
+        condition: service_healthy
+      service-two:
+        condition: service_healthy
+      ui:
+        condition: service_healthy
+    environment:
+      - PlaywrightSettings__BaseUrl=http://ui:3000
+      - PlaywrightSettings__BrowserName=chromium
+      - PlaywrightSettings__Headless=true
+    volumes:
+      - ./tests/Playwright.Tests/TestResults:/app/TestResults
+      - ./coverage-report:/app/coverage-report
+
+networks:
+  app-network:
+    driver: bridge

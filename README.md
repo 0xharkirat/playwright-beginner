@@ -39,9 +39,33 @@ playwright-beginner/
 
 - [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 - [Node.js 20+](https://nodejs.org/)
+- [Docker & Docker Compose](https://docs.docker.com/get-docker/) (recommended for testing)
 - [PowerShell Core](https://github.com/PowerShell/PowerShell) (for Playwright browser installation)
 
-### Running the Services
+### 🐳 Quick Start with Docker (Recommended)
+
+**Start all services:**
+```bash
+docker compose up -d
+```
+
+**Run Playwright tests:**
+```bash
+docker compose run --rm playwright-tests
+```
+
+**Stop services:**
+```bash
+docker compose down
+```
+
+👉 **See [Docker Guide](_docs/DOCKER_GUIDE.md) for complete Docker documentation**
+
+👉 **See [Docker Guide](_docs/DOCKER_GUIDE.md) for complete Docker documentation**
+
+### Running Services Locally (Alternative)
+
+If you prefer running services without Docker:
 
 **Service-One (Port 5001):**
 ```bash
@@ -116,47 +140,45 @@ Tests are located in `tests/Playwright.Tests/` and can be discovered by:
 - **Single source of truth:** `appsettings.json`
 - **BaseTest class:** Extends PageTest with custom configuration
 - **Page Object Model:** Optional pattern for complex pages (see examples)
-- **Coverage:** Integrated with Coverlet for code coverage reporting
+- **Coverage:** I**Docker Compose** for reliable CI/CD testing:
 
-## CI/CD
-
-The project uses a **modular GitHub Actions pipeline** with orchestrator pattern:
-
-- **[main.yml](.github/workflows/main.yml)**: Orchestrator workflow coordinating all jobs
-- **[service-one.yml](.github/workflows/service-one.yml)**: Build & run Service-One
-- **[service-two.yml](.github/workflows/service-two.yml)**: Build & run Service-Two
-- **[ui-app.yml](.github/workflows/ui-app.yml)**: Build & run Next.js UI
-- **[playwright.yml](.github/workflows/playwright.yml)**: E2E tests with Coverlet coverage
-
-### Pipeline Flow
+### Pipeline Architecture
 
 ```
-Stage 1: Build Services (Parallel)
-   ├─ Service-One (port 5001)
-   ├─ Service-Two (port 5002)
-   └─ UI (port 3000)
+Stage 1: Build & Validate (Parallel)
+   ├─ Service-One build
+   ├─ Service-Two build
+   └─ UI build
       ↓
-Stage 2: Run E2E Tests
-   └─ Playwright Tests + Coverage
+Stage 2: E2E Tests with Docker Compose
+   ├─ Build Docker images
+   ├─ Start services in containers
+   ├─ Wait for health checks
+   ├─ Run Playwright tests in container
+   └─ Generate coverage reports
       ↓
 Stage 3: Publish Results
-   └─ Test results, Coverage reports, Traces
+   └─ Upload test results & coverage
 ```
+
+### Key Features
+
+✅ **Docker-based testing** - All services run in isolated containers  
+✅ **Health checks** - Tests run only after services are ready  
+✅ **Works locally & in CI** - Same Docker Compose configuration  
+✅ **Code coverage** - Integrated Coverlet + ReportGenerator  
+✅ **Service logs** - Automatically shown on test failures  
 
 ### 📚 CI/CD Documentation
 
 Comprehensive guides available in the [`_docs/`](_docs/) directory:
 
+- **[🐳 Docker Guide](_docs/DOCKER_GUIDE.md)** - Docker-based CI/CD (RECOMMENDED)
 - **[🚀 Quick Start Guide](_docs/CI_CD_QUICK_START.md)** - Get CI/CD running in 5 minutes
 - **[📖 Workflow Documentation](_docs/CI_CD_WORKFLOWS.md)** - Detailed workflow reference
 - **[🎨 Architecture & Diagrams](_docs/WORKFLOW_ARCHITECTURE.md)** - Visual architecture guide
 - **[👁️ GitHub UI Guide](_docs/GITHUB_ACTIONS_UI.md)** - What to expect in GitHub
-- **[✅ Implementation Summary](_docs/IMPLEMENTATION_SUMMARY.md)** - Complete overview
-
-### Key Features
-
-✅ Modular reusable workflows  
-✅ Parallel service builds (saves ~60% time)  
+- **[✅ Implementation Summary](_docs/IMPLEMENTATION_SUMMARY.md)** - Complete overview ~60% time)  
 ✅ Code coverage with HTML reports  
 ✅ Beautiful dependency graph in GitHub UI  
 ✅ PR integration with test results  
@@ -212,8 +234,9 @@ This project has comprehensive documentation covering all aspects:
 - **[📚 Documentation Index](_docs/README.md)** - Central hub for all documentation
 - **[GitHub Actions UI Guide](_docs/GITHUB_ACTIONS_UI.md)** - What to expect in GitHub
 
-## 🚀 Quick Links
-
-- [CI/CD Quick Start](_docs/CI_CD_QUICK_START.md) - Get running in 5 minutes
+## 🐳 Docker Guide](_docs/DOCKER_GUIDE.md) - **Start here for local & CI testing**
+- [CI/CD Quick Start](_docs/CI_CD_QUICK_START.md) - Set up GitHub Actions
+- [Test Framework Guide](tests/Playwright.Tests/README.md) - Write your first test
+- [📚 CI/CD Quick Start](_docs/CI_CD_QUICK_START.md) - Get running in 5 minutes
 - [Test Framework Guide](tests/Playwright.Tests/README.md) - Write your first test
 - [Documentation Index](_docs/README.md) - Browse all documentation
