@@ -1,60 +1,44 @@
-﻿using Microsoft.Playwright;
+﻿using System.Text.RegularExpressions;
+using Microsoft.Playwright;
+using Microsoft.Playwright.Xunit;
 
 namespace Playwright.Tests;
 
-public class ExampleTests : IAsyncLifetime
+public class UnitTest1 : PageTest
 {
-    private IPlaywright? _playwright;
-    private IBrowser? _browser;
-    private IBrowserContext? _context;
-    private IPage? _page;
-
-    public async Task InitializeAsync()
+    [Fact]
+    public async Task HasTitle()
     {
-        _playwright = await Microsoft.Playwright.Playwright.CreateAsync();
-        _browser = await _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
-        {
-            Headless = true
-        });
-        _context = await _browser.NewContextAsync();
-        _page = await _context.NewPageAsync();
-    }
 
-    public async Task DisposeAsync()
-    {
-        await _page?.CloseAsync()!;
-        await _context?.CloseAsync()!;
-        await _browser?.CloseAsync()!;
-        _playwright?.Dispose();
+        // Expect a title "to contain" a substring.
+        await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
     }
 
     [Fact]
-    public async Task HomePage_ShouldLoad()
+    public async Task GetStartedLink()
     {
-        // Navigate to the Next.js UI
-        await _page!.GotoAsync("http://localhost:3000");
-        
-        // Wait for page to load
-        await _page.WaitForLoadStateAsync(LoadState.NetworkIdle);
-        
-        // Assert page title or content
-        var title = await _page.TitleAsync();
-        Assert.NotEmpty(title);
+
+        // click the get started link.
+        await Page.GetByRole(AriaRole.Link, new() { Name = "Get started" }).ClickAsync();
+
+        // Expects page to have a heading with the name of Installation
+        await Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "Installation" })).ToBeVisibleAsync();
+
     }
 
-    [Fact]
-    public async Task ServiceOne_HealthCheck_ShouldReturn200()
+    public override async Task InitializeAsync()
     {
-        // Test Service-One health endpoint
-        var response = await _page!.GotoAsync("http://localhost:5001/swagger");
-        Assert.True(response?.Ok);
+        await base.InitializeAsync();
+        // Additional setup can be done here
+        Console.WriteLine("Navigating to Playwright homepage...");
+        await Page.GotoAsync("https://playwright.dev/");
     }
 
-    [Fact]
-    public async Task ServiceTwo_HealthCheck_ShouldReturn200()
+    public override async Task DisposeAsync()
     {
-        // Test Service-Two health endpoint
-        var response = await _page!.GotoAsync("http://localhost:5002/swagger");
-        Assert.True(response?.Ok);
+        // Additional teardown can be done here
+        Console.WriteLine("Test completed. Cleaning up...");
+        await base.DisposeAsync();
+
     }
 }
