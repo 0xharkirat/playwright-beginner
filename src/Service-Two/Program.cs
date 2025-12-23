@@ -13,6 +13,6 @@ var app = builder.Build();
 app.UseOpenApi();
 app.UseSwaggerUi();
 
-app.MapGet("/api/World", () => "Hark");
+app.MapGet("/api/World", () => "World");
 
 app.Run();

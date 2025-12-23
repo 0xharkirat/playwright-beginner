@@ -1,4 +1,4 @@
-name: 🎭 CI/CD Pipeline with Docker
+name: 🎭 CI/CD Pipeline
 
 on:
   push:
@@ -9,26 +9,152 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
 jobs:
   # ========================================
-  # E2E Tests with Docker Compose
+  # Build Service-One
   # ========================================
-
-  e2e-tests-docker:
-    name: 🎭 E2E Tests (Docker)
+  build-service-one:
+    name: 🔨 Build Service-One
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 10
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore src/Service-One/Service-One.csproj
+
+      - name: Build
+        run: dotnet build src/Service-One/Service-One.csproj -c Release --no-restore
+
+      - name: Publish
+        run: dotnet publish src/Service-One/Service-One.csproj -c Release --no-build -o src/Service-One/bin/Release/net9.0/publish
+
+      - name: Upload Service-One artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: service-one
+          path: src/Service-One/bin/Release/net9.0/publish/
+          retention-days: 1
+
+  # ========================================
+  # Build Service-Two
+  # ========================================
+  build-service-two:
+    name: 🔨 Build Service-Two
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore src/Service-Two/Service-Two.csproj
+
+      - name: Build
+        run: dotnet build src/Service-Two/Service-Two.csproj -c Release --no-restore
+
+      - name: Publish
+        run: dotnet publish src/Service-Two/Service-Two.csproj -c Release --no-build -o src/Service-Two/bin/Release/net9.0/publish
+
+      - name: Upload Service-Two artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: service-two
+          path: src/Service-Two/bin/Release/net9.0/publish/
+          retention-days: 1
+
+  # ========================================
+  # Build UI
+  # ========================================
+  build-ui:
+    name: 🔨 Build UI
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Enable pnpm
+        run: corepack enable && corepack prepare pnpm@latest --activate
+
+      - name: Install dependencies
+        run: cd ui && pnpm install --frozen-lockfile
+
+      - name: Build
+        run: cd ui && pnpm run build
+
+      - name: Upload UI artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui
+          path: |
+            ui/.next
+            ui/node_modules
+            ui/package.json
+            ui/public
+          retention-days: 1
+
+  # ========================================
+  # E2E Tests with Docker
+  # ========================================
+  e2e-tests:
+    name: 🎭 E2E Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: [build-service-one, build-service-two, build-ui]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Service-One artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: service-one
+          path: src/Service-One/bin/Release/net9.0/publish/
+
+      - name: Download Service-Two artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: service-two
+          path: src/Service-Two/bin/Release/net9.0/publish/
+
+      - name: Download UI artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: ui
+          path: ui/
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build services (no cache for fresh code)
+      - name: Build Docker images
         run: |
-          docker compose build --no-cache service-one service-two ui
+          docker compose build service-one service-two ui
           docker compose build playwright-tests
 
       - name: Start services

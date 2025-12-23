@@ -1,8 +1,8 @@
 services:
   service-one:
     build:
-      context: ./src/Service-One
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./src/Service-One/Dockerfile
     container_name: service-one
     ports:
       - "5001:5001"
@@ -19,8 +19,8 @@ services:
 
   service-two:
     build:
-      context: ./src/Service-Two
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./src/Service-Two/Dockerfile
     container_name: service-two
     ports:
       - "5002:5002"
@@ -35,8 +35,8 @@ services:
 
   ui:
     build:
-      context: ./ui
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./ui/Dockerfile
     container_name: ui
     ports:
       - "3000:3000"

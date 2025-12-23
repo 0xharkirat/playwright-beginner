@@ -16,9 +16,17 @@ fi
 echo "✅ Docker is running"
 echo ""
 
-# Build and start services (--no-cache ensures code changes are detected)
-echo "🔨 Building services without cache to ensure fresh code..."
-DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 docker compose build --no-cache service-one service-two ui
+# Build services locally (outside Docker)
+echo "🔨 Building services locally..."
+./build-local.sh
+if [ $? -ne 0 ]; then
+    echo "❌ Failed to build services"
+    exit 1
+fi
+
+# Build and start services (no-cache ensures fresh Docker images)
+echo "🐳 Building Docker images..."
+docker compose build service-one service-two ui
 echo "🚀 Starting services..."
 docker compose up -d service-one service-two ui
 echo "✅ Services built and started"
