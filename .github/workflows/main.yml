@@ -107,15 +107,27 @@ jobs:
       - name: Build
         run: cd ui && pnpm run build
 
-      - name: Upload UI artifacts
+      - name: Upload UI .next build output
         uses: actions/upload-artifact@v4
         with:
-          name: ui
+          name: ui-next
+          path: ui/.next/
+          retention-days: 1
+
+      - name: Upload UI node_modules
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-node-modules
+          path: ui/node_modules/
+          retention-days: 1
+
+      - name: Upload UI static files
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-static
           path: |
-            ui/.next
-            ui/node_modules
             ui/package.json
-            ui/public
+            ui/public/
           retention-days: 1
 
   # ========================================
@@ -143,11 +155,23 @@ jobs:
           name: service-two
           path: src/Service-Two/bin/Release/net9.0/publish/
 
-      - name: Download UI artifacts
+      - name: Download UI .next artifacts
         uses: actions/download-artifact@v4
         with:
-          name: ui
-          path: .
+          name: ui-next
+          path: ui/.next/
+
+      - name: Download UI node_modules artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: ui-node-modules
+          path: ui/node_modules/
+
+      - name: Download UI static files
+        uses: actions/download-artifact@v4
+        with:
+          name: ui-static
+          path: ui/
 
       - name: Debug - List downloaded artifacts
         run: |
