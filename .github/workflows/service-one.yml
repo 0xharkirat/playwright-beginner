@@ -1,0 +1,49 @@
+name: Build & Run Service-One
+
+on:
+    workflow_call:
+        outputs:
+            service-url:
+                description: "Service-One URL"
+                value: ${{ jobs.build-and-run.outputs.service-url }}
+
+jobs:
+    build-and-run:
+        name: Build and Start Service-One
+        runs-on: ubuntu-latest
+        outputs:
+            service-url: ${{ steps.set-output.outputs.service-url }}
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup .NET
+              uses: actions/setup-dotnet@v4
+              with:
+                  dotnet-version: "9.0.x"
+
+            - name: Restore dependencies
+              run: dotnet restore src/Service-One/Service-One.csproj
+
+            - name: Build Service-One
+              run: dotnet build src/Service-One/Service-One.csproj --no-restore --configuration Release
+
+            - name: Start Service-One in background
+              run: |
+                  dotnet run --project src/Service-One/Service-One.csproj --no-build --configuration Release &
+                  echo $! > service-one.pid
+              env:
+                  ASPNETCORE_URLS: http://localhost:5001
+
+            - name: Wait for Service-One to be ready
+              run: |
+                  timeout 60 bash -c 'until curl -f http://localhost:5001/swagger > /dev/null 2>&1; do sleep 2; done'
+                  echo "Service-One is ready at http://localhost:5001"
+
+            - name: Set output
+              id: set-output
+              run: echo "service-url=http://localhost:5001" >> $GITHUB_OUTPUT
+
+            - name: Save PID for cleanup
+              run: echo "SERVICE_ONE_PID=$(cat service-one.pid)" >> $GITHUB_ENV

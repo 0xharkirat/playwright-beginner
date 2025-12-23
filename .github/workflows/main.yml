@@ -1,0 +1,67 @@
+name: 🎭 E2E Test Pipeline
+
+on:
+    push:
+        branches: [main]
+   
+    workflow_dispatch:
+
+# Cancel in-progress runs for the same workflow and branch
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    # ========================================
+    # Stage 1: Build & Start Services (Parallel)
+    # ========================================
+
+    build-service-one:
+        name: 🔨 Service-One
+        uses: ./.github/workflows/service-one.yml
+
+    build-service-two:
+        name: 🔨 Service-Two
+        uses: ./.github/workflows/service-two.yml
+
+    build-ui:
+        name: 🔨 UI
+        uses: ./.github/workflows/ui-app.yml
+
+    # ========================================
+    # Stage 2: Run E2E Tests (After All Services Ready)
+    # ========================================
+
+    run-playwright-tests:
+        name: 🎭 Playwright Tests
+        needs: [build-service-one, build-service-two, build-ui]
+        uses: ./.github/workflows/playwright.yml
+        with:
+            service-one-url: ${{ needs.build-service-one.outputs.service-url }}
+            service-two-url: ${{ needs.build-service-two.outputs.service-url }}
+            ui-url: ${{ needs.build-ui.outputs.app-url }}
+
+    # ========================================
+    # Stage 3: Summary
+    # ========================================
+
+    pipeline-complete:
+        name: ✅ Pipeline Complete
+        needs: [run-playwright-tests]
+        runs-on: ubuntu-latest
+        if: always()
+
+        steps:
+            - name: Check pipeline status
+              run: |
+                  if [ "${{ needs.run-playwright-tests.result }}" = "success" ]; then
+                    echo "✅ All tests passed!" >> $GITHUB_STEP_SUMMARY
+                    echo "### Test Results Summary" >> $GITHUB_STEP_SUMMARY
+                    echo "- Service-One: ✅ Running" >> $GITHUB_STEP_SUMMARY
+                    echo "- Service-Two: ✅ Running" >> $GITHUB_STEP_SUMMARY
+                    echo "- UI: ✅ Running" >> $GITHUB_STEP_SUMMARY
+                    echo "- Playwright Tests: ✅ Passed" >> $GITHUB_STEP_SUMMARY
+                  else
+                    echo "❌ Pipeline failed" >> $GITHUB_STEP_SUMMARY
+                    exit 1
+                  fi

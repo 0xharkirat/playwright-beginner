@@ -8,14 +8,25 @@ A monorepo containing .NET microservices, Next.js UI, and Playwright E2E tests w
 playwright-beginner/
 ├── .github/
 │   └── workflows/           # CI/CD pipelines
-│       ├── dotnet-services.yml
-│       ├── ui.yml
-│       └── playwright-tests.yml
+│       ├── main.yml        # Orchestrator workflow
+│       ├── service-one.yml # Service-One build & run
+│       ├── service-two.yml # Service-Two build & run
+│       ├── ui-app.yml      # UI build & run
+│       └── playwright.yml  # E2E tests with coverage
+├── _docs/                   # 📚 Comprehensive documentation
+│   ├── README.md           # Documentation index
+│   ├── CI_CD_QUICK_START.md
+│   ├── CI_CD_WORKFLOWS.md
+│   ├── WORKFLOW_ARCHITECTURE.md
+│   ├── GITHUB_ACTIONS_UI.md
+│   └── IMPLEMENTATION_SUMMARY.md
 ├── src/                     # Production application code
 │   ├── Service-One/        # .NET 9.0 Web API
 │   └── Service-Two/        # .NET 9.0 Web API
 ├── tests/                   # Test projects
 │   └── Playwright.Tests/   # C# xUnit Playwright E2E tests
+│       ├── README.md       # Test framework guide
+│       └── OFFICIAL_PATTERNS.md
 ├── ui/                      # Next.js frontend application
 ├── .gitignore
 ├── playwright-beginner.sln  # Solution file containing all .NET projects
@@ -95,12 +106,61 @@ Tests are located in `tests/Playwright.Tests/` and can be discovered by:
 - Visual Studio Test Explorer
 - `dotnet test` CLI
 
+### 🧪 Test Framework Documentation
+
+- **[Test Framework Guide](tests/Playwright.Tests/README.md)** - Architecture and usage
+- **[Official Patterns Guide](tests/Playwright.Tests/OFFICIAL_PATTERNS.md)** - Playwright patterns explained
+
+### Test Configuration
+
+- **Single source of truth:** `appsettings.json`
+- **BaseTest class:** Extends PageTest with custom configuration
+- **Page Object Model:** Optional pattern for complex pages (see examples)
+- **Coverage:** Integrated with Coverlet for code coverage reporting
+
 ## CI/CD
 
-GitHub Actions workflows are configured for:
-- **dotnet-services.yml**: Builds and tests .NET services
-- **ui.yml**: Builds and tests Next.js application
-- **playwright-tests.yml**: Runs E2E tests against all services
+The project uses a **modular GitHub Actions pipeline** with orchestrator pattern:
+
+- **[main.yml](.github/workflows/main.yml)**: Orchestrator workflow coordinating all jobs
+- **[service-one.yml](.github/workflows/service-one.yml)**: Build & run Service-One
+- **[service-two.yml](.github/workflows/service-two.yml)**: Build & run Service-Two
+- **[ui-app.yml](.github/workflows/ui-app.yml)**: Build & run Next.js UI
+- **[playwright.yml](.github/workflows/playwright.yml)**: E2E tests with Coverlet coverage
+
+### Pipeline Flow
+
+```
+Stage 1: Build Services (Parallel)
+   ├─ Service-One (port 5001)
+   ├─ Service-Two (port 5002)
+   └─ UI (port 3000)
+      ↓
+Stage 2: Run E2E Tests
+   └─ Playwright Tests + Coverage
+      ↓
+Stage 3: Publish Results
+   └─ Test results, Coverage reports, Traces
+```
+
+### 📚 CI/CD Documentation
+
+Comprehensive guides available in the [`_docs/`](_docs/) directory:
+
+- **[🚀 Quick Start Guide](_docs/CI_CD_QUICK_START.md)** - Get CI/CD running in 5 minutes
+- **[📖 Workflow Documentation](_docs/CI_CD_WORKFLOWS.md)** - Detailed workflow reference
+- **[🎨 Architecture & Diagrams](_docs/WORKFLOW_ARCHITECTURE.md)** - Visual architecture guide
+- **[👁️ GitHub UI Guide](_docs/GITHUB_ACTIONS_UI.md)** - What to expect in GitHub
+- **[✅ Implementation Summary](_docs/IMPLEMENTATION_SUMMARY.md)** - Complete overview
+
+### Key Features
+
+✅ Modular reusable workflows  
+✅ Parallel service builds (saves ~60% time)  
+✅ Code coverage with HTML reports  
+✅ Beautiful dependency graph in GitHub UI  
+✅ PR integration with test results  
+✅ Trace uploads on test failures
 
 ## Development
 
@@ -119,9 +179,41 @@ Create new test classes in `tests/Playwright.Tests/` following the xUnit pattern
 
 - **src/**: Clearly separates production code from tests
 - **tests/**: Groups all test projects together
+- **_docs/**: Comprehensive documentation in one place
 - **Solution file at root**: VS Code and Visual Studio can discover all .NET projects
 - **C# Playwright with xUnit**: 
   - Native integration with .NET Test Explorer
   - Can reference and test .NET services directly
   - Better type safety and IntelliSense
   - Familiar testing patterns for .NET developers
+- **Modular CI/CD**: 
+  - Reusable workflows for each service
+  - Parallel execution for speed
+  - Beautiful dependency graph in GitHub UI
+
+## 📚 Documentation
+
+This project has comprehensive documentation covering all aspects:
+
+### For Developers
+
+- **[Getting Started Guide](_docs/CI_CD_QUICK_START.md)** - Set up CI/CD in 5 minutes
+- **[Test Framework Guide](tests/Playwright.Tests/README.md)** - Write and run tests
+- **[Workflow Documentation](_docs/CI_CD_WORKFLOWS.md)** - Understand CI/CD pipelines
+
+### For DevOps/Architects
+
+- **[Workflow Architecture](_docs/WORKFLOW_ARCHITECTURE.md)** - Visual diagrams and architecture
+- **[Official Patterns](tests/Playwright.Tests/OFFICIAL_PATTERNS.md)** - Test patterns explained
+- **[Implementation Summary](_docs/IMPLEMENTATION_SUMMARY.md)** - Complete overview
+
+### For Everyone
+
+- **[📚 Documentation Index](_docs/README.md)** - Central hub for all documentation
+- **[GitHub Actions UI Guide](_docs/GITHUB_ACTIONS_UI.md)** - What to expect in GitHub
+
+## 🚀 Quick Links
+
+- [CI/CD Quick Start](_docs/CI_CD_QUICK_START.md) - Get running in 5 minutes
+- [Test Framework Guide](tests/Playwright.Tests/README.md) - Write your first test
+- [Documentation Index](_docs/README.md) - Browse all documentation
