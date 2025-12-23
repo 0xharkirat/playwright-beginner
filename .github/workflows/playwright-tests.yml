@@ -20,7 +20,7 @@ jobs:
     
     - name: Build & Install
       working-directory: ./tests/Playwright.Tests
-      run: dotnet build
+      run: dotnet build -c Release
     
     - name: Install Playwright browsers
       working-directory: ./tests/Playwright.Tests
