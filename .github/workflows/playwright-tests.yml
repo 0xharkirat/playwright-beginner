@@ -2,9 +2,7 @@ name: Playwright E2E Tests
 
 on:
   push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -13,67 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     
     - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: '9.0.x'
     
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
-        cache-dependency-path: './ui/package-lock.json'
-    
-    - name: Restore .NET dependencies
-      run: dotnet restore
-    
-    - name: Build .NET services
-      run: |
-        dotnet build src/Service-One/Service-One.csproj --no-restore --configuration Release
-        dotnet build src/Service-Two/Service-Two.csproj --no-restore --configuration Release
-    
-    - name: Install UI dependencies
-      working-directory: ./ui
-      run: npm ci
-    
-    - name: Build UI
-      working-directory: ./ui
-      run: npm run build
-    
-    - name: Start Service-One
-      run: |
-        dotnet run --project src/Service-One/Service-One.csproj --no-build --configuration Release &
-        echo $! > service-one.pid
-      env:
-        ASPNETCORE_URLS: http://localhost:5001
-    
-    - name: Start Service-Two
-      run: |
-        dotnet run --project src/Service-Two/Service-Two.csproj --no-build --configuration Release &
-        echo $! > service-two.pid
-      env:
-        ASPNETCORE_URLS: http://localhost:5002
-    
-    - name: Start UI
-      working-directory: ./ui
-      run: |
-        npm run start &
-        echo $! > ../ui.pid
-      env:
-        PORT: 3000
-    
-    - name: Wait for services to be ready
-      run: |
-        timeout 60 bash -c 'until curl -f http://localhost:5001/swagger > /dev/null 2>&1; do sleep 2; done'
-        timeout 60 bash -c 'until curl -f http://localhost:5002/swagger > /dev/null 2>&1; do sleep 2; done'
-        timeout 60 bash -c 'until curl -f http://localhost:3000 > /dev/null 2>&1; do sleep 2; done'
-    
-    - name: Restore Playwright test dependencies
+    - name: Build & Install
       working-directory: ./tests/Playwright.Tests
-      run: dotnet restore
+      run: dotnet build
     
     - name: Install Playwright browsers
       working-directory: ./tests/Playwright.Tests
@@ -85,15 +32,8 @@ jobs:
     
     - name: Upload test results
       uses: actions/upload-artifact@v4
-      if: always()
       with:
         name: playwright-test-results
         path: tests/Playwright.Tests/TestResults/
-        retention-days: 30
+        retention-days: 7
     
-    - name: Cleanup
-      if: always()
-      run: |
-        [ -f service-one.pid ] && kill $(cat service-one.pid) || true
-        [ -f service-two.pid ] && kill $(cat service-two.pid) || true
-        [ -f ui.pid ] && kill $(cat ui.pid) || true
