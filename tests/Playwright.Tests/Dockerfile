@@ -27,9 +27,9 @@ ENV PATH="${PATH}:/root/.dotnet/tools"
 
 # Run tests with coverage
 CMD ["dotnet", "test", \
-     "--no-build", \
-     "--configuration", "Release", \
-     "--logger", "trx;LogFileName=test-results.trx", \
-     "--collect:XPlat Code Coverage", \
-     "--results-directory", "./TestResults", \
-     "--", "DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover"]
+    "--no-build", \
+    "--configuration", "Release", \
+    "--logger", "trx;LogFileName=test-results.trx", \
+    "--collect:XPlat Code Coverage", \
+    "--results-directory", "./TestResults", \
+    "--", "DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover"]

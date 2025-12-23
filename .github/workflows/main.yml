@@ -15,28 +15,28 @@ jobs:
   # ========================================
   # E2E Tests with Docker Compose
   # ========================================
-  
+
   e2e-tests-docker:
     name: 🎭 E2E Tests (Docker)
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      
+
       - name: Build Docker images
         run: |
           docker compose build service-one service-two ui playwright-tests
-      
+
       - name: Start services with Docker Compose
         run: |
           docker compose up -d service-one service-two ui
           echo "⏳ Waiting for services to be healthy..."
-      
+
       - name: Wait for services to be ready
         run: |
           echo "⏳ Waiting for services to be healthy..."
@@ -63,11 +63,11 @@ jobs:
           exit 1
           '
           docker compose ps
-      
+
       - name: Run Playwright tests in Docker
         run: |
           docker compose run --rm playwright-tests
-      
+
       - name: Generate coverage report
         if: always()
         run: |
@@ -78,14 +78,14 @@ jobs:
               -reporttypes:'Html;MarkdownSummaryGithub' \
               -verbosity:'Info'
           " || echo "Coverage generation skipped"
-      
+
       - name: Add coverage to PR comment
         if: always() && github.event_name == 'pull_request'
         run: |
           if [ -f coverage-report/SummaryGithub.md ]; then
             cat coverage-report/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
           fi
-      
+
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
@@ -93,7 +93,7 @@ jobs:
           name: playwright-test-results
           path: tests/Playwright.Tests/TestResults/
           retention-days: 30
-      
+
       - name: Upload coverage report
         if: always()
         uses: actions/upload-artifact@v4
@@ -101,7 +101,7 @@ jobs:
           name: coverage-report
           path: coverage-report/
           retention-days: 30
-      
+
       - name: Show service logs on failure
         if: failure()
         run: |
@@ -111,9 +111,7 @@ jobs:
           docker compose logs service-two
           echo "📋 UI logs:"
           docker compose logs ui
-      
+
       - name: Stop services
         if: always()
         run: docker compose down -v
-  
-
