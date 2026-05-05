@@ -1,0 +1,46 @@
+ 
+In this video, I show you some new
+Playwright features for working with
+coding agents.
+I use Copilot CLI, but this works the
+same in other agents like Cloud Code or
+Codex.
+I prepared a plan for redesigning our
+HTML reporter.
+Let me kick it off.
+You can see Copilot using the Playwright
+CLI skill to take a screenshot of its
+work, click around the page, and verify
+what it's doing.
+After my agent is happy with its work, I
+want to see results.
+It already provided me with screenshots,
+but I now I want to get feedback. So, I
+asked my agent to let me perform a UI
+review.
+The agent opens up the Playwright
+dashboard, where I can see a screenshot
+of the redesign.
+I can scribble my feedback right onto
+the frame, just like you know it from
+your smartphone.
+Once I submit my feedback, the agent
+receives the screenshot both as a PNG
+and in structural form, so my multimodal
+model can understand it.
+You can see it immediately goes to act
+on my feedback.
+The dashboard also shows all running
+browser sessions at a glance, so it's
+helpful for getting an overview of my
+background agents working.
+In this case, I have two more agents
+working in the background.
+I can pull up the dashboard manually by
+running Playwright CLI show in my
+terminal.
+This was a demo of how a Playwright CLI
+and the Playwright dashboard help you
+build software even before testing.
+Check out the links in the description
+to get started.

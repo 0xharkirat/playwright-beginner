@@ -1,0 +1,131 @@
+- generic [active] [ref=e1]:
+  - link "Loving Tina? us on GitHub 13.3k" [ref=e4] [cursor=pointer]:
+    - /url: https://github.com/tinacms/tinacms
+    - text: Loving Tina?
+    - img [ref=e5]
+    - text: us on GitHub
+    - generic [ref=e7]:
+      - img [ref=e8]
+      - generic [ref=e10]: 13.3k
+  - generic [ref=e11]:
+    - paragraph [ref=e12]:
+      - text: We use cookies to improve your experience. By continuing, you accept our
+      - link "cookie policy" [ref=e13] [cursor=pointer]:
+        - /url: /privacy-notice
+      - text: .
+    - generic [ref=e14]:
+      - button "Accept All" [ref=e15] [cursor=pointer]
+      - button "Reject All" [ref=e16] [cursor=pointer]
+    - button "Manage cookies" [ref=e17] [cursor=pointer]
+  - generic [ref=e18]:
+    - banner [ref=e20]:
+      - generic [ref=e21]:
+        - navigation "Mobile navigation" [ref=e22]
+        - link [ref=e125] [cursor=pointer]:
+          - /url: /
+    - main [ref=e129]:
+      - generic [ref=e131]:
+        - generic [ref=e132]
+        - 'img "{Sites,} Docs and Llamas. No Dramas" [ref=e155]'
+      - generic [ref=e161]:
+        - link "Bunny Net" [ref=e164] [cursor=pointer]:
+          - /url: /showcase#bunny-net
+        - link "Unity" [ref=e169] [cursor=pointer]:
+          - /url: /showcase#unity
+        - link "Protocol Labs" [ref=e174] [cursor=pointer]:
+          - /url: /showcase#Microgen
+        - link "City of London" [ref=e179] [cursor=pointer]:
+          - /url: https://www.cityoflondon.gov.uk/
+        - link "Devolver Digital" [ref=e184] [cursor=pointer]:
+          - /url: /showcase#devolver-digital
+        - link "Smashing Magazine" [ref=e189] [cursor=pointer]:
+          - /url: /showcase#smashing-magazine
+        - link "Roev" [ref=e193] [cursor=pointer]:
+          - /url: /showcase#roev
+        - link "Supernova" [ref=e197] [cursor=pointer]:
+          - /url: /showcase#supernova
+        - link "Paradise Helicopters" [ref=e201] [cursor=pointer]:
+          - /url: /showcase#paradise-helicopters
+        - link "NDC Conferences" [ref=e205] [cursor=pointer]:
+          - /url: /showcase#ndc-conferences
+        - link "SSW" [ref=e209] [cursor=pointer]:
+          - /url: /showcase#ssw
+        - link "Comedia" [ref=e213] [cursor=pointer]:
+          - /url: /showcase#comedia
+        - link "RRE Ventures" [ref=e217] [cursor=pointer]:
+          - /url: /showcase#rre-ventures
+        - link "Shadow Lion" [ref=e221] [cursor=pointer]:
+          - /url: /showcase#shadow-lion
+        - link "Locality Bank" [ref=e225] [cursor=pointer]:
+          - /url: /showcase#locality-bank
+        - link "Bunny Net" [ref=e229] [cursor=pointer]:
+          - /url: /showcase#bunny-net
+        - link "Unity" [ref=e234] [cursor=pointer]:
+          - /url: /showcase#unity
+        - link "Protocol Labs" [ref=e239] [cursor=pointer]:
+          - /url: /showcase#Microgen
+        - link "City of London" [ref=e244] [cursor=pointer]:
+          - /url: https://www.cityoflondon.gov.uk/
+        - link "Devolver Digital" [ref=e249] [cursor=pointer]:
+          - /url: /showcase#devolver-digital
+        - link "Smashing Magazine" [ref=e254] [cursor=pointer]:
+          - /url: /showcase#smashing-magazine
+        - link "Roev" [ref=e258] [cursor=pointer]:
+          - /url: /showcase#roev
+        - link "Supernova" [ref=e262] [cursor=pointer]:
+          - /url: /showcase#supernova
+        - link "Paradise Helicopters" [ref=e266] [cursor=pointer]:
+          - /url: /showcase#paradise-helicopters
+        - link "NDC Conferences" [ref=e270] [cursor=pointer]:
+          - /url: /showcase#ndc-conferences
+        - link "SSW" [ref=e274] [cursor=pointer]:
+          - /url: /showcase#ssw
+        - link "Comedia" [ref=e278] [cursor=pointer]:
+          - /url: /showcase#comedia
+        - link "RRE Ventures" [ref=e282] [cursor=pointer]:
+          - /url: /showcase#rre-ventures
+        - link "Shadow Lion" [ref=e286] [cursor=pointer]:
+          - /url: /showcase#shadow-lion
+        - link "Locality Bank" [ref=e290] [cursor=pointer]:
+          - /url: /showcase#locality-bank
+      - generic [ref=e293]:
+        - heading "STREAMLINE, ORGANIZE, SUCCEED" [level=3] [ref=e294]
+        - heading "Your All-in-One Content Hub" [level=2] [ref=e295]
+        - generic [ref=e296]
+      - generic [ref=e327]:
+        - generic [ref=e329]
+        - generic [ref=e362]
+      - generic [ref=e380]:
+        - heading "Tired of Lengthy Set-ups?" [level=2] [ref=e381]
+        - generic [ref=e384]
+      - generic [ref=e393]:
+        - heading "Where's Tina?" [level=2] [ref=e394]
+        - paragraph [ref=e396]: Tina's hitting the road, and you don't want to miss out. Check out our stops and see TinaCMS in action!
+        - generic [ref=e399]
+      - generic [ref=e448]:
+        - heading "Hear from Other Great Users" [level=2] [ref=e450]
+        - generic [ref=e452]
+      - generic [ref=e1134]:
+        - generic [ref=e1135]
+        - generic [ref=e1174]
+      - generic [ref=e1205]:
+        - generic [ref=e1206]
+        - generic [ref=e1210]
+      - generic [ref=e1273]:
+        - generic
+        - generic [ref=e1274]
+    - contentinfo [ref=e1281]:
+      - generic [ref=e1282]:
+        - generic [ref=e1392]
+        - generic [ref=e1284]
+        - generic [ref=e1338]
+      - link "TinaCMS is maintained by SSW , Australia's leading software consultants" [ref=e1364] [cursor=pointer]:
+        - /url: https://www.ssw.com.au
+        - text: TinaCMS is maintained by
+        - img "SSW" [ref=e1365]
+        - generic [ref=e1376]: ","
+        - text: Australia's leading software consultants
+  - alert [ref=e1377]
+  - generic [ref=e1384] [cursor=pointer]: Got a question? Ask Tina’s AI assistant 🦙
+  - button "chat-button" [ref=e1385] [cursor=pointer]:
+    - img [ref=e1387]

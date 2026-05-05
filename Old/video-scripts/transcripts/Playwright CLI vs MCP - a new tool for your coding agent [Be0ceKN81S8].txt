@@ -1,0 +1,167 @@
+ 
+Hi there. Let me show you what Playright
+CLA is. It's a new tool in the Playright
+family.
+In this video, we're going to talk about
+what Playright CLA is. We'll compare it
+to MCP, give some demos, talk about
+token efficiency, uh some capabilities,
+and uh hopefully you'll have a better
+idea on which one you should be using in
+the future. Let me start with the demo.
+This is a demo of the Playright CLI
+functionality. I'm starting in an empty
+folder uh demo CLI and uh I'm going to
+install playright CLI globally. It means
+that it'll be available in all the
+locations and the first thing I do is
+I'm initializing my workspace. I'm
+saying playright CLI install which uh
+creates an empty folder called playrite
+playright and that's it. And we are
+using that to differentiate between
+different workspaces on your disk. Each
+of these workspaces uh is going to have
+its own set of browsers that it's going
+to use. more about that later. But I'd
+like to also install some skills in this
+workspace. I'm calling install skills
+and uh it installs a bunch of uh cloud
+skills in my workspace. Let me start
+cloud and give it a task. I'm going to
+ask it to open playright def which is a
+web page. Search for locators which is
+just a word and check that the doc is
+available for each language. And uh by
+the language we means that it's
+available for JavaScript, Python, Java
+and .NET. And I'm also asking it to take
+screenshots for each uh of the language
+docs. So let's see how it does it. What
+we're looking at is 16x uh time lapse of
+what was happening. And uh what was
+happening is just cloud was talking to a
+browser using the CLI utility. Let's see
+the result is there. Let's look at the
+context which allows us to see how much
+tokens we have spent. But we won't stop
+here for a long time. And we're going to
+proceed with the MCP version of the same
+task. Um, let me start cla
+um I see MCP server installed. Playright
+MCP is installed. No skills are
+installed in this work folder. So what
+I'm going to do is I'm going to give it
+exactly the same task and again 16x
+timelapse. And uh it's done. Let's also
+open the context stats here to see how
+much tokens we have consumed.
+All right. So what we are seeing here is
+that we have uh taken 114,000 tokens for
+this operation which is quite costly.
+Let's compare this to what we have
+gotten with CLI and the CLI has taken
+only 26.8,000 tokens.
+So what we have seen in the demo was
+that MTP consumed more context. But why?
+Let's dig a little deeper.
+This is what MTP was doing. So let's
+explore these two calls. First, it tried
+to navigate to a page and play rate dev
+is a docosource page. It's pretty big.
+It has a lot of content, a lot of uh DOM
+control, scripts, etc. And even though
+playrate MCP is uh very efficient in uh
+conveying only the accessibility
+snapshot to the LLM, it still replied
+with the entirety of it and it all has
+gotten into the context window. And we
+can see here that result exceeds the
+maximum amount of tokens.
+And after that it took a screenshot. But
+when uh MTP is taking a screenshot LLM
+is asking it to do so. So we are
+replying with all those bytes to the LLM
+itself. And again the image tokens end
+up in the context. And in this case that
+wasn't the goal. All we wanted was to
+capture a screenshot and save it on
+disk. Let's compare it to what CLI was
+doing. CLI said I'd like to go to a
+location. And then without even
+capturing a snapshot or reading a file
+with a snapshot from the disk which was
+created as a result of this call, it
+immediately took a screenshot and saved
+it this file. As a result, it saved
+context. None of these uh tokens got
+into it because LLM didn't actually need
+them. So what CLI is doing is uh all of
+the data that it emits it saves into
+files and then your coding agent is
+going to make a decision of whether it
+needs to go to LLM or not. Let's talk
+about capabilities.
+We saw how MCP worked but you will see
+that MCP only used a couple of dozens of
+commands and that is not because of uh
+we don't have those. We do have them. In
+fact, all the CLA capabilities are also
+present through MCP. We just don't
+enable them by default because they are
+consuming context.
+On the other hand, on CLI, we don't have
+that limitation. So, we can expose all
+of these commands and more.
+All right. So, we've seen uh the token
+use. We've talked about capabilities.
+Now, seems like it's a no-brainer. You
+should be using CLI, right? Well, let's
+talk about it a little bit.
+CLI is the new tool and it shines when
+it's being used as a part of the coding
+agent and the coding agent is uh your
+claude code or GitHub copilot or any
+other agent that can edit files that has
+access to your workspace. We can be
+efficient there. We can capture those
+snapshots, save them on disk, save those
+screenshots on disk and let coding agent
+decide whether it wants to read them in
+full or it wants to send the entirety
+into the LLM. So, it becomes token
+efficient that way. So CLI requires a
+coding agent to be efficient. Uh other
+than that it is skill-based and you can
+add knowledge about playrite and your
+scenarios and through the skills. So
+it's interoperable with other
+skill-based tools. It also is headless
+by default because we assume that you're
+going to run a lot of background agents
+in your coding agents with them.
+On the other hand, MCP is going to work
+with any generic agent. It's a strict
+standard and tools know what to expect,
+how to call these MTP tools, what the
+results are. But in this case,
+everything is in the hands of the LLM.
+So all of the replies are most likely
+going to make their way back into the
+LLM and are potentially going to
+overwhelm its context. You can still
+have multiple browsers in MTP. No
+problem. And the efficiency of MCP can
+actually be configured. You can uh allow
+and disallow those tools and see what
+you need. It's a little bit more manual
+in that regard. Also, historically MCP
+is by default. So to recap, if you're
+using a coding agent, if your tasks are
+coding, testing, you're using cloud,
+GitHub, copilot, you probably want to
+use CLI. On the other hand, if you are
+authoring an agentic loop that is
+performing certain tasks for your
+scenarios, MTP is still the way to go.
+That's about it. Heavy testing.

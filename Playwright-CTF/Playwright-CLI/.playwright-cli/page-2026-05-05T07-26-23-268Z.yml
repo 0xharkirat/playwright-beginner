@@ -1,0 +1,1265 @@
+- generic [active] [ref=e1]:
+  - link "Loving Tina? us on GitHub 13.3k" [ref=e4] [cursor=pointer]:
+    - /url: https://github.com/tinacms/tinacms
+    - text: Loving Tina?
+    - img [ref=e5]
+    - text: us on GitHub
+    - generic [ref=e7]:
+      - img [ref=e8]
+      - generic [ref=e10]: 13.3k
+  - generic [ref=e11]:
+    - paragraph [ref=e12]:
+      - text: We use cookies to improve your experience. By continuing, you accept our
+      - link "cookie policy" [ref=e13] [cursor=pointer]:
+        - /url: /privacy-notice
+      - text: .
+    - generic [ref=e14]:
+      - button "Accept All" [ref=e15] [cursor=pointer]
+      - button "Reject All" [ref=e16] [cursor=pointer]
+    - button "Manage cookies" [ref=e17] [cursor=pointer]
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - banner:
+        - navigation [ref=e21]:
+          - link [ref=e22] [cursor=pointer]:
+            - /url: /
+            - img [ref=e23]
+          - list [ref=e26]:
+            - listitem [ref=e27] [cursor=pointer]:
+              - button "TinaCMS" [ref=e28]:
+                - text: TinaCMS
+                - img [ref=e29]
+              - list:
+                - listitem:
+                  - link "Home":
+                    - /url: /tinacms
+                - listitem:
+                  - link "Docs for TinaCMS":
+                    - /url: /docs
+                - listitem:
+                  - link "Videos":
+                    - /url: https://www.youtube.com/c/tinacms
+                    - text: Videos
+                    - img
+                - listitem:
+                  - link "Showcase":
+                    - /url: /showcase
+                - listitem:
+                  - link "What's New in TinaCMS":
+                    - /url: /whats-new/tinacms
+                - listitem:
+                  - link "Versions":
+                    - /url: /versions
+            - listitem [ref=e32] [cursor=pointer]:
+              - button "TinaDocs" [ref=e33]:
+                - text: TinaDocs
+                - img [ref=e34]
+              - list:
+                - listitem:
+                  - link "Home":
+                    - /url: /tinadocs
+                - listitem:
+                  - link "Docs for TinaDocs":
+                    - /url: /tinadocs/docs
+            - listitem [ref=e37] [cursor=pointer]:
+              - button "TinaCloud" [ref=e38]:
+                - text: TinaCloud
+                - img [ref=e39]
+              - list:
+                - listitem:
+                  - link "Pricing":
+                    - /url: /pricing
+                - listitem:
+                  - link "Enterprise":
+                    - /url: /enterprise
+                - listitem:
+                  - link "Quickstart":
+                    - /url: https://app.tina.io/quickstart
+                    - text: Quickstart
+                    - img
+                - listitem:
+                  - link "What's New in TinaCloud":
+                    - /url: /whats-new/tinacloud
+            - listitem [ref=e42]:
+              - link "Editorial Workflow" [ref=e43] [cursor=pointer]:
+                - /url: /editorial-workflow
+            - listitem [ref=e44] [cursor=pointer]:
+              - button "Community" [ref=e45]:
+                - text: Community
+                - img [ref=e46]
+              - list:
+                - listitem:
+                  - link "Events":
+                    - /url: /events
+                - listitem:
+                  - link "Certifications":
+                    - /url: /certifications
+                - listitem:
+                  - link "Awesome TinaCMS":
+                    - /url: https://github.com/tinacms/awesome-tinacms
+                    - text: Awesome TinaCMS
+                    - img
+                - listitem:
+                  - link "Discord":
+                    - /url: https://discord.com/invite/zumN63Ybpf
+                    - text: Discord
+                    - img
+                - listitem:
+                  - link "Support":
+                    - /url: /docs/support
+                - listitem:
+                  - link "Forum":
+                    - /url: https://github.com/tinacms/tinacms/discussions
+                    - text: Forum
+                    - img
+                - listitem:
+                  - link "Roadmap":
+                    - /url: /roadmap
+            - listitem [ref=e49] [cursor=pointer]:
+              - button "About" [ref=e50]:
+                - text: About
+                - img [ref=e51]
+              - list:
+                - listitem:
+                  - link "About Tina":
+                    - /url: /about
+                - listitem:
+                  - link "Compare TinaCMS":
+                    - /url: /compare-tina
+                - listitem:
+                  - link "Blog":
+                    - /url: /blog
+                - listitem:
+                  - link "Examples":
+                    - /url: /examples
+                - listitem:
+                  - button "Contact Us"
+          - listitem [ref=e54]:
+            - link "My TinaCloud" [ref=e55] [cursor=pointer]:
+              - /url: https://app.tina.io
+            - button "English Flag" [ref=e56] [cursor=pointer]:
+              - img "English Flag" [ref=e57]
+    - main [ref=e58]:
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - link "new See how SSW moved 3500+ pages to TinaCMS" [ref=e63] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=lqqduKKhH_o
+              - generic [ref=e64]:
+                - generic [ref=e65]:
+                  - img [ref=e66]
+                  - text: new
+                - generic [ref=e70]: See how SSW moved 3500+ pages to TinaCMS
+            - heading "Sites, Docs and Llamas. No Dramas" [level=1] [ref=e71]
+            - paragraph [ref=e72]: Build stunning websites with TinaCMS visual editor, or create beautiful documentation with TinaDocs. Both powered by Git and built for developers who love great UX.
+          - button "> npx create-tina-app@latest" [ref=e76] [cursor=pointer]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: ">"
+              - generic [ref=e79]: npx create-tina-app@latest
+              - generic [ref=e80]:
+                - img [ref=e81]
+                - img
+        - 'img "{Sites,} Docs and Llamas. No Dramas" [ref=e84]'
+      - generic [ref=e90]:
+        - link "Bunny Net" [ref=e93] [cursor=pointer]:
+          - /url: /showcase#bunny-net
+          - img "Bunny Net" [ref=e95]
+        - link "Unity" [ref=e98] [cursor=pointer]:
+          - /url: /showcase#unity
+          - img "Unity" [ref=e100]
+        - link "Protocol Labs" [ref=e103] [cursor=pointer]:
+          - /url: /showcase#Microgen
+          - img "Protocol Labs" [ref=e105]
+        - link "City of London" [ref=e108] [cursor=pointer]:
+          - /url: https://www.cityoflondon.gov.uk/
+          - img "City of London" [ref=e110]
+        - link "Devolver Digital" [ref=e113] [cursor=pointer]:
+          - /url: /showcase#devolver-digital
+          - img "Devolver Digital" [ref=e115]
+        - link "Smashing Magazine" [ref=e118] [cursor=pointer]:
+          - /url: /showcase#smashing-magazine
+          - generic [ref=e119]:
+            - img "Smashing Magazine"
+        - link "Roev" [ref=e122] [cursor=pointer]:
+          - /url: /showcase#roev
+          - generic [ref=e123]:
+            - img "Roev"
+        - link "Supernova" [ref=e126] [cursor=pointer]:
+          - /url: /showcase#supernova
+          - generic [ref=e127]:
+            - img "Supernova"
+        - link "Paradise Helicopters" [ref=e130] [cursor=pointer]:
+          - /url: /showcase#paradise-helicopters
+          - generic [ref=e131]:
+            - img "Paradise Helicopters"
+        - link "NDC Conferences" [ref=e134] [cursor=pointer]:
+          - /url: /showcase#ndc-conferences
+          - generic [ref=e135]:
+            - img "NDC Conferences"
+        - link "SSW" [ref=e138] [cursor=pointer]:
+          - /url: /showcase#ssw
+          - generic [ref=e139]:
+            - img "SSW"
+        - link "Comedia" [ref=e142] [cursor=pointer]:
+          - /url: /showcase#comedia
+          - generic [ref=e143]:
+            - img "Comedia"
+        - link "RRE Ventures" [ref=e146] [cursor=pointer]:
+          - /url: /showcase#rre-ventures
+          - generic [ref=e147]:
+            - img "RRE Ventures"
+        - link "Shadow Lion" [ref=e150] [cursor=pointer]:
+          - /url: /showcase#shadow-lion
+          - generic [ref=e151]:
+            - img "Shadow Lion"
+        - link "Locality Bank" [ref=e154] [cursor=pointer]:
+          - /url: /showcase#locality-bank
+          - generic [ref=e155]:
+            - img "Locality Bank"
+        - link "Bunny Net" [ref=e158] [cursor=pointer]:
+          - /url: /showcase#bunny-net
+          - img "Bunny Net" [ref=e160]
+        - link "Unity" [ref=e163] [cursor=pointer]:
+          - /url: /showcase#unity
+          - img "Unity" [ref=e165]
+        - link "Protocol Labs" [ref=e168] [cursor=pointer]:
+          - /url: /showcase#Microgen
+          - img "Protocol Labs" [ref=e170]
+        - link "City of London" [ref=e173] [cursor=pointer]:
+          - /url: https://www.cityoflondon.gov.uk/
+          - img "City of London" [ref=e175]
+        - link "Devolver Digital" [ref=e178] [cursor=pointer]:
+          - /url: /showcase#devolver-digital
+          - img "Devolver Digital" [ref=e180]
+        - link "Smashing Magazine" [ref=e183] [cursor=pointer]:
+          - /url: /showcase#smashing-magazine
+          - generic [ref=e184]:
+            - img "Smashing Magazine"
+        - link "Roev" [ref=e187] [cursor=pointer]:
+          - /url: /showcase#roev
+          - generic [ref=e188]:
+            - img "Roev"
+        - link "Supernova" [ref=e191] [cursor=pointer]:
+          - /url: /showcase#supernova
+          - generic [ref=e192]:
+            - img "Supernova"
+        - link "Paradise Helicopters" [ref=e195] [cursor=pointer]:
+          - /url: /showcase#paradise-helicopters
+          - generic [ref=e196]:
+            - img "Paradise Helicopters"
+        - link "NDC Conferences" [ref=e199] [cursor=pointer]:
+          - /url: /showcase#ndc-conferences
+          - generic [ref=e200]:
+            - img "NDC Conferences"
+        - link "SSW" [ref=e203] [cursor=pointer]:
+          - /url: /showcase#ssw
+          - generic [ref=e204]:
+            - img "SSW"
+        - link "Comedia" [ref=e207] [cursor=pointer]:
+          - /url: /showcase#comedia
+          - generic [ref=e208]:
+            - img "Comedia"
+        - link "RRE Ventures" [ref=e211] [cursor=pointer]:
+          - /url: /showcase#rre-ventures
+          - generic [ref=e212]:
+            - img "RRE Ventures"
+        - link "Shadow Lion" [ref=e215] [cursor=pointer]:
+          - /url: /showcase#shadow-lion
+          - generic [ref=e216]:
+            - img "Shadow Lion"
+        - link "Locality Bank" [ref=e219] [cursor=pointer]:
+          - /url: /showcase#locality-bank
+          - generic [ref=e220]:
+            - img "Locality Bank"
+      - generic [ref=e222]:
+        - heading "STREAMLINE, ORGANIZE, SUCCEED" [level=3] [ref=e223]
+        - heading "Your All-in-One Content Hub" [level=2] [ref=e224]
+        - generic [ref=e225]:
+          - generic [ref=e226]:
+            - generic:
+              - img
+            - generic [ref=e227]:
+              - heading "TinaCMS" [level=3] [ref=e228]
+              - heading "Visual Editor for Developers" [level=4] [ref=e229]
+              - paragraph [ref=e231]: An open-source, headless CMS with built-in Git version control. Edit content visually while maintaining full developer control.
+              - generic [ref=e232]:
+                - link "Learn about TinaCMS" [ref=e234] [cursor=pointer]:
+                  - /url: /tinacms
+                  - text: Learn about TinaCMS
+                  - img [ref=e235]
+                - link "Try the Editor" [ref=e238] [cursor=pointer]:
+                  - /url: https://demo.tina.io/admin#/~
+            - img "TinaCMS" [ref=e240]
+          - generic [ref=e241]:
+            - generic:
+              - img
+            - generic [ref=e242]:
+              - heading "TinaDocs" [level=3] [ref=e243]
+              - heading "Beautiful Documentation Made Simple" [level=4] [ref=e244]
+              - paragraph [ref=e245]: A complete documentation starter built on-top of TinaCMS. Create, edit and publish beautiful docs with zero configuration.
+              - generic [ref=e246]:
+                - link "Learn about TinaDocs" [ref=e248] [cursor=pointer]:
+                  - /url: /tinadocs
+                  - text: Learn about TinaDocs
+                  - img [ref=e249]
+                - link "Try the Editor" [ref=e252] [cursor=pointer]:
+                  - /url: https://docsdemo.tina.io/admin/index.html#/~/docs
+            - img "TinaDocs" [ref=e254]
+      - generic [ref=e256]:
+        - generic [ref=e258]:
+          - img "Secondary image" [ref=e260]
+          - generic [ref=e261]:
+            - generic [ref=e267]: ~/my-tina-site
+            - generic [ref=e268]:
+              - generic [ref=e269]:
+                - paragraph [ref=e270]: $ npx create-tina-app@latest my-blog
+                - generic [ref=e271]:
+                  - paragraph [ref=e272]: ✓Creating your markdown repository...
+                  - paragraph [ref=e273]: ✓Content ready for GEO optimization
+              - generic [ref=e274]:
+                - paragraph [ref=e275]: $ echo "GEO loves markdown"
+                - generic [ref=e276]:
+                  - paragraph [ref=e277]: "> AI-powered search optimization"
+                  - paragraph [ref=e278]: "> No complex build steps"
+                  - paragraph [ref=e279]: "> LLM compatibility: excellent"
+                  - paragraph [ref=e280]: "> GEO readiness: excellent"
+            - generic [ref=e282]:
+              - generic [ref=e285]: Markdown in
+              - img [ref=e286]
+              - generic [ref=e290]: AI + GEO ready
+        - generic [ref=e291]:
+          - heading "Markdown is the Answer. The question is irrelevant..." [level=2] [ref=e292]:
+            - text: Markdown is the Answer.
+            - text: The question is irrelevant...
+          - paragraph [ref=e293]: LLMs think in it. GEO runs on it. Your CMS should too. LLMs understand Markdown natively — it's the format they were trained on. Tina stores everything as Markdown in your Git repo, so your content stays clean, portable, and AI-friendly from the moment you publish.
+          - generic [ref=e294]:
+            - generic [ref=e295]:
+              - img [ref=e296]
+              - generic [ref=e298]: LLM-Ready
+            - generic [ref=e299]:
+              - img [ref=e300]
+              - generic [ref=e302]: Git-Native
+            - generic [ref=e303]:
+              - img [ref=e304]
+              - generic [ref=e306]: Open Format
+      - generic [ref=e309]:
+        - heading "Tired of Lengthy Set-ups?" [level=2] [ref=e310]
+        - separator [ref=e312]
+        - generic [ref=e313]:
+          - button "Play YouTube video player" [ref=e316] [cursor=pointer]:
+            - img "Play YouTube video" [ref=e317]
+          - paragraph [ref=e320]: "Video: Getting Started in TinaCMS with NPX (2 min)"
+      - generic [ref=e322]:
+        - heading "Where's Tina?" [level=2] [ref=e323]
+        - paragraph [ref=e325]: Tina's hitting the road, and you don't want to miss out. Check out our stops and see TinaCMS in action!
+        - generic [ref=e328]:
+          - generic [ref=e329]:
+            - generic [ref=e330]:
+              - img "/NEW Newcastle" [ref=e333]
+              - generic [ref=e334]:
+                - generic [ref=e335]: Event Finished
+                - heading "/NEW Newcastle" [level=3] [ref=e336]
+                - paragraph [ref=e338]: 28th - 29th May 2025
+                - paragraph [ref=e339]: Newcastle, Australia
+                - link "Read more about /NEW Newcastle" [ref=e340] [cursor=pointer]:
+                  - /url: https://slashnew.tech/
+                  - text: Read more
+                  - generic [ref=e341]: about /NEW Newcastle
+                  - img [ref=e342]
+            - generic [ref=e344]:
+              - img "NDC Copenhagen" [ref=e347]
+              - generic [ref=e348]:
+                - generic [ref=e349]: Event Finished
+                - heading "NDC Copenhagen" [level=3] [ref=e350]
+                - paragraph [ref=e352]: 9th - 13th Sep 2025
+                - paragraph [ref=e353]: Copenhagen, Denmark
+                - link "Read more about NDC Copenhagen" [ref=e354] [cursor=pointer]:
+                  - /url: https://ndccopenhagen.com/
+                  - text: Read more
+                  - generic [ref=e355]: about NDC Copenhagen
+                  - img [ref=e356]
+            - generic [ref=e358]:
+              - img "Azure Dev Summit" [ref=e361]
+              - generic [ref=e362]:
+                - generic [ref=e363]: Event Finished
+                - heading "Azure Dev Summit" [level=3] [ref=e364]
+                - paragraph [ref=e366]: 14th - 17th Oct 2025
+                - paragraph [ref=e367]: Lisbon, Portugal
+                - link "Read more about Azure Dev Summit" [ref=e368] [cursor=pointer]:
+                  - /url: https://azuredevsummit.com/
+                  - text: Read more
+                  - generic [ref=e369]: about Azure Dev Summit
+                  - img [ref=e370]
+          - link "SEE ALL EVENTS" [ref=e372] [cursor=pointer]:
+            - /url: /events
+            - generic [ref=e373]: SEE ALL EVENTS
+            - img [ref=e374]
+      - generic [ref=e377]:
+        - heading "Hear from Other Great Users" [level=2] [ref=e379]
+        - generic [ref=e381]:
+          - generic [ref=e382]:
+            - link [ref=e384] [cursor=pointer]:
+              - /url: https://x.com/madewith_react/status/1854188254716645700
+              - figure [ref=e385]:
+                - img "quotation" [ref=e386]
+                - blockquote [ref=e387]:
+                  - paragraph [ref=e389]: Add real-time content editing to your React websites with TinaCMS, an open-source toolkit to create visual editing experiences
+                - generic [ref=e390]:
+                  - img "MadeWithReactJS avatar" [ref=e391]
+                  - generic [ref=e392]:
+                    - heading "MadeWithReactJS" [level=4] [ref=e393]
+                    - paragraph [ref=e394]: "@madewith_react–November 6, 2024"
+            - link [ref=e396] [cursor=pointer]:
+              - /url: https://x.com/quentinbdb/status/1847795017416401229
+              - figure [ref=e397]:
+                - img "quotation" [ref=e398]
+                - blockquote [ref=e399]:
+                  - generic [ref=e400]:
+                    - paragraph [ref=e401]: Very happy to finally release the new website !
+                    - paragraph [ref=e402]: There is still a few things to add and adjust, but it will be easy to do so! We built it on Astro & TinaCMS for speed and collaboration!
+                - generic [ref=e403]:
+                  - img "ffmad.xcp avatar" [ref=e404]
+                  - generic [ref=e405]:
+                    - heading "ffmad.xcp" [level=4] [ref=e406]
+                    - paragraph [ref=e407]: "@quentinbdb–October 19, 2024"
+            - link [ref=e409] [cursor=pointer]:
+              - /url: https://x.com/CrowderSoup/status/1839722550232003048
+              - figure [ref=e410]:
+                - img "quotation" [ref=e411]
+                - blockquote [ref=e412]:
+                  - paragraph [ref=e414]: Whoa, this works with Hugo (which I'm currently using). Definitely going to have to play with this over the weekend.
+                - generic [ref=e415]:
+                  - img "Aaron Crowder avatar" [ref=e416]
+                  - generic [ref=e417]:
+                    - heading "Aaron Crowder" [level=4] [ref=e418]
+                    - paragraph [ref=e419]: "@CrowderSoup–September 27, 2024"
+            - link [ref=e421] [cursor=pointer]:
+              - /url: https://x.com/cassidoo/status/1839650659735663054
+              - figure [ref=e422]:
+                - img "quotation" [ref=e423]
+                - blockquote [ref=e424]:
+                  - paragraph [ref=e426]: TinaCMS is what I use and I love it!
+                - generic [ref=e427]:
+                  - img "Cassidy avatar" [ref=e428]
+                  - generic [ref=e429]:
+                    - heading "Cassidy" [level=4] [ref=e430]
+                    - paragraph [ref=e431]: "@cassidoo–September 26, 2024"
+            - link [ref=e433] [cursor=pointer]:
+              - /url: https://x.com/manucoffin/status/1825455891421802720
+              - figure [ref=e434]:
+                - img "quotation" [ref=e435]
+                - blockquote [ref=e436]:
+                  - paragraph [ref=e438]: I just built a complete blog structure for my upcoming project with TinaCMS in 2 minutes. And it worked perfectly on the first try
+                - generic [ref=e439]:
+                  - img "Manu Coffin avatar" [ref=e440]
+                  - generic [ref=e441]:
+                    - heading "Manu Coffin" [level=4] [ref=e442]
+                    - paragraph [ref=e443]: "@manucoffin–August 18, 2024"
+            - link [ref=e445] [cursor=pointer]:
+              - /url: https://twitter.com/arzafran/status/1719387497564708956
+              - figure [ref=e446]:
+                - img "quotation" [ref=e447]
+                - blockquote [ref=e448]:
+                  - paragraph [ref=e450]: From complaining here, to merged PR in less than 24hs, incredible customer experience by TinaCMS. Their CEO jumped on a call, listened to all our issues and took notes, but not on imaginary paper, feels like fixes where WIP as we were describing them.
+                - generic [ref=e451]:
+                  - img "Arzafran avatar" [ref=e452]
+                  - generic [ref=e453]:
+                    - heading "Arzafran" [level=4] [ref=e454]
+                    - paragraph [ref=e455]: "@arzafran–October 31, 2023"
+            - link [ref=e457] [cursor=pointer]:
+              - /url: https://twitter.com/struhy_xd/status/1706770885254787099
+              - figure [ref=e458]:
+                - img "quotation" [ref=e459]
+                - blockquote [ref=e460]:
+                  - paragraph [ref=e462]: Oh wow, I thought Sanity was good, but @tinacms is all I need.
+                - generic [ref=e463]:
+                  - img "Boko Colse avatar" [ref=e464]
+                  - generic [ref=e465]:
+                    - heading "Boko Colse" [level=4] [ref=e466]
+                    - paragraph [ref=e467]: "@struhy_xd–September 26, 2023"
+            - link [ref=e469] [cursor=pointer]:
+              - /url: https://twitter.com/smashingmag/status/1703886402704842990
+              - figure [ref=e470]:
+                - img "quotation" [ref=e471]
+                - blockquote [ref=e472]:
+                  - paragraph [ref=e474]: With the recent integration of TinaCMS, SmashingMag enjoys the best of both worlds — the performance benefits of static assets and the writing experience that helps streamline the editing process.
+                - generic [ref=e475]:
+                  - img "Smashing Magazine avatar" [ref=e476]
+                  - generic [ref=e477]:
+                    - heading "Smashing Magazine" [level=4] [ref=e478]
+                    - paragraph [ref=e479]: "@smashingmag–September 18, 2023"
+            - link [ref=e481] [cursor=pointer]:
+              - /url: https://discord.com/channels/835168149439643678/848932514911354880/1113764832668299274
+              - figure [ref=e482]:
+                - img "quotation" [ref=e483]
+                - blockquote [ref=e484]:
+                  - paragraph [ref=e486]: It’s absolutely amazing. Its so simple to install, the typed NextJS integration is amazing, the live editor is as good as it gets. And compared to other CMSs, the admin is incredibly easy for editors to understand and use.
+                - generic [ref=e487]:
+                  - img "Dave Keen avatar" [ref=e488]
+                  - generic [ref=e489]:
+                    - heading "Dave Keen" [level=4] [ref=e490]
+                    - paragraph [ref=e491]: "@ccapndave–June 7, 2023"
+            - link [ref=e493] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=PcgnJDILv4w&lc=Ugy92XCmtPug2_1Lr554AaABAg
+              - figure [ref=e494]:
+                - img "quotation" [ref=e495]
+                - blockquote [ref=e496]:
+                  - paragraph [ref=e498]: Just found this and I think I am already in love.
+                - generic [ref=e499]:
+                  - img "Billy Best avatar" [ref=e500]
+                  - generic [ref=e501]:
+                    - heading "Billy Best" [level=4] [ref=e502]
+                    - paragraph [ref=e503]: "@billybest5276–August 6, 2023"
+            - link [ref=e505] [cursor=pointer]:
+              - /url: https://discord.com/channels/835168149439643678/848932514911354880/1118255235706663103
+              - figure [ref=e506]:
+                - img "quotation" [ref=e507]
+                - blockquote [ref=e508]:
+                  - paragraph [ref=e510]: Just tried out click-to-edit and it's really awesome. Super easy to use and to setup, love that it's fully typed and works passed down as a prop, kinda feels like magic tbh.
+                - generic [ref=e511]:
+                  - img "Mravec avatar" [ref=e512]
+                  - generic [ref=e513]:
+                    - heading "Mravec" [level=4] [ref=e514]
+                    - paragraph [ref=e515]: "@mravec–June 14, 2023"
+            - link [ref=e517] [cursor=pointer]:
+              - /url: https://rusin.work
+              - figure [ref=e518]:
+                - img "quotation" [ref=e519]
+                - blockquote [ref=e520]:
+                  - paragraph [ref=e522]: I tried a dozen CMSs and I have to say, as an engineer, I like Tina the most.
+                - generic [ref=e523]:
+                  - img "Peter Rusin avatar" [ref=e524]
+                  - generic [ref=e525]:
+                    - heading "Peter Rusin" [level=4] [ref=e526]
+                    - paragraph [ref=e527]: September 5, 2023
+            - link [ref=e529] [cursor=pointer]:
+              - /url: https://www.shaunpearce.ie/
+              - figure [ref=e530]:
+                - img "quotation" [ref=e531]
+                - blockquote [ref=e532]:
+                  - paragraph [ref=e534]: Tina's in-context editor cannot be beaten, we’re all in on it.
+                - generic [ref=e535]:
+                  - img "Sean Pearce avatar" [ref=e536]
+                  - generic [ref=e537]:
+                    - heading "Sean Pearce" [level=4] [ref=e538]
+                    - paragraph [ref=e539]: March 30, 2023
+            - link [ref=e541] [cursor=pointer]:
+              - /url: https://twitter.com/rascode11/status/1600175861621088266
+              - figure [ref=e542]:
+                - img "quotation" [ref=e543]
+                - blockquote [ref=e544]:
+                  - paragraph [ref=e546]: "@tinacms is a dream come true."
+                - generic [ref=e547]:
+                  - img "rascode avatar" [ref=e548]
+                  - generic [ref=e549]:
+                    - heading "rascode" [level=4] [ref=e550]
+                    - paragraph [ref=e551]: "@rascode11–December 6, 2022"
+          - generic [ref=e552]:
+            - link [ref=e554] [cursor=pointer]:
+              - /url: https://x.com/madewith_react/status/1854188254716645700
+              - figure [ref=e555]:
+                - img "quotation" [ref=e556]
+                - blockquote [ref=e557]:
+                  - paragraph [ref=e559]: Add real-time content editing to your React websites with TinaCMS, an open-source toolkit to create visual editing experiences
+                - generic [ref=e560]:
+                  - img "MadeWithReactJS avatar" [ref=e561]
+                  - generic [ref=e562]:
+                    - heading "MadeWithReactJS" [level=4] [ref=e563]
+                    - paragraph [ref=e564]: "@madewith_react–November 6, 2024"
+            - link [ref=e566] [cursor=pointer]:
+              - /url: https://x.com/quentinbdb/status/1847795017416401229
+              - figure [ref=e567]:
+                - img "quotation" [ref=e568]
+                - blockquote [ref=e569]:
+                  - generic [ref=e570]:
+                    - paragraph [ref=e571]: Very happy to finally release the new website !
+                    - paragraph [ref=e572]: There is still a few things to add and adjust, but it will be easy to do so! We built it on Astro & TinaCMS for speed and collaboration!
+                - generic [ref=e573]:
+                  - img "ffmad.xcp avatar" [ref=e574]
+                  - generic [ref=e575]:
+                    - heading "ffmad.xcp" [level=4] [ref=e576]
+                    - paragraph [ref=e577]: "@quentinbdb–October 19, 2024"
+            - link [ref=e579] [cursor=pointer]:
+              - /url: https://x.com/CrowderSoup/status/1839722550232003048
+              - figure [ref=e580]:
+                - img "quotation" [ref=e581]
+                - blockquote [ref=e582]:
+                  - paragraph [ref=e584]: Whoa, this works with Hugo (which I'm currently using). Definitely going to have to play with this over the weekend.
+                - generic [ref=e585]:
+                  - img "Aaron Crowder avatar" [ref=e586]
+                  - generic [ref=e587]:
+                    - heading "Aaron Crowder" [level=4] [ref=e588]
+                    - paragraph [ref=e589]: "@CrowderSoup–September 27, 2024"
+            - link [ref=e591] [cursor=pointer]:
+              - /url: https://x.com/cassidoo/status/1839650659735663054
+              - figure [ref=e592]:
+                - img "quotation" [ref=e593]
+                - blockquote [ref=e594]:
+                  - paragraph [ref=e596]: TinaCMS is what I use and I love it!
+                - generic [ref=e597]:
+                  - img "Cassidy avatar" [ref=e598]
+                  - generic [ref=e599]:
+                    - heading "Cassidy" [level=4] [ref=e600]
+                    - paragraph [ref=e601]: "@cassidoo–September 26, 2024"
+            - link [ref=e603] [cursor=pointer]:
+              - /url: https://x.com/manucoffin/status/1825455891421802720
+              - figure [ref=e604]:
+                - img "quotation" [ref=e605]
+                - blockquote [ref=e606]:
+                  - paragraph [ref=e608]: I just built a complete blog structure for my upcoming project with TinaCMS in 2 minutes. And it worked perfectly on the first try
+                - generic [ref=e609]:
+                  - img "Manu Coffin avatar" [ref=e610]
+                  - generic [ref=e611]:
+                    - heading "Manu Coffin" [level=4] [ref=e612]
+                    - paragraph [ref=e613]: "@manucoffin–August 18, 2024"
+            - link [ref=e615] [cursor=pointer]:
+              - /url: https://twitter.com/arzafran/status/1719387497564708956
+              - figure [ref=e616]:
+                - img "quotation" [ref=e617]
+                - blockquote [ref=e618]:
+                  - paragraph [ref=e620]: From complaining here, to merged PR in less than 24hs, incredible customer experience by TinaCMS. Their CEO jumped on a call, listened to all our issues and took notes, but not on imaginary paper, feels like fixes where WIP as we were describing them.
+                - generic [ref=e621]:
+                  - img "Arzafran avatar" [ref=e622]
+                  - generic [ref=e623]:
+                    - heading "Arzafran" [level=4] [ref=e624]
+                    - paragraph [ref=e625]: "@arzafran–October 31, 2023"
+            - link [ref=e627] [cursor=pointer]:
+              - /url: https://twitter.com/struhy_xd/status/1706770885254787099
+              - figure [ref=e628]:
+                - img "quotation" [ref=e629]
+                - blockquote [ref=e630]:
+                  - paragraph [ref=e632]: Oh wow, I thought Sanity was good, but @tinacms is all I need.
+                - generic [ref=e633]:
+                  - img "Boko Colse avatar" [ref=e634]
+                  - generic [ref=e635]:
+                    - heading "Boko Colse" [level=4] [ref=e636]
+                    - paragraph [ref=e637]: "@struhy_xd–September 26, 2023"
+            - link [ref=e639] [cursor=pointer]:
+              - /url: https://twitter.com/smashingmag/status/1703886402704842990
+              - figure [ref=e640]:
+                - img "quotation" [ref=e641]
+                - blockquote [ref=e642]:
+                  - paragraph [ref=e644]: With the recent integration of TinaCMS, SmashingMag enjoys the best of both worlds — the performance benefits of static assets and the writing experience that helps streamline the editing process.
+                - generic [ref=e645]:
+                  - img "Smashing Magazine avatar" [ref=e646]
+                  - generic [ref=e647]:
+                    - heading "Smashing Magazine" [level=4] [ref=e648]
+                    - paragraph [ref=e649]: "@smashingmag–September 18, 2023"
+            - link [ref=e651] [cursor=pointer]:
+              - /url: https://discord.com/channels/835168149439643678/848932514911354880/1113764832668299274
+              - figure [ref=e652]:
+                - img "quotation" [ref=e653]
+                - blockquote [ref=e654]:
+                  - paragraph [ref=e656]: It’s absolutely amazing. Its so simple to install, the typed NextJS integration is amazing, the live editor is as good as it gets. And compared to other CMSs, the admin is incredibly easy for editors to understand and use.
+                - generic [ref=e657]:
+                  - img "Dave Keen avatar" [ref=e658]
+                  - generic [ref=e659]:
+                    - heading "Dave Keen" [level=4] [ref=e660]
+                    - paragraph [ref=e661]: "@ccapndave–June 7, 2023"
+            - link [ref=e663] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=PcgnJDILv4w&lc=Ugy92XCmtPug2_1Lr554AaABAg
+              - figure [ref=e664]:
+                - img "quotation" [ref=e665]
+                - blockquote [ref=e666]:
+                  - paragraph [ref=e668]: Just found this and I think I am already in love.
+                - generic [ref=e669]:
+                  - img "Billy Best avatar" [ref=e670]
+                  - generic [ref=e671]:
+                    - heading "Billy Best" [level=4] [ref=e672]
+                    - paragraph [ref=e673]: "@billybest5276–August 6, 2023"
+            - link [ref=e675] [cursor=pointer]:
+              - /url: https://discord.com/channels/835168149439643678/848932514911354880/1118255235706663103
+              - figure [ref=e676]:
+                - img "quotation" [ref=e677]
+                - blockquote [ref=e678]:
+                  - paragraph [ref=e680]: Just tried out click-to-edit and it's really awesome. Super easy to use and to setup, love that it's fully typed and works passed down as a prop, kinda feels like magic tbh.
+                - generic [ref=e681]:
+                  - img "Mravec avatar" [ref=e682]
+                  - generic [ref=e683]:
+                    - heading "Mravec" [level=4] [ref=e684]
+                    - paragraph [ref=e685]: "@mravec–June 14, 2023"
+            - link [ref=e687] [cursor=pointer]:
+              - /url: https://rusin.work
+              - figure [ref=e688]:
+                - img "quotation" [ref=e689]
+                - blockquote [ref=e690]:
+                  - paragraph [ref=e692]: I tried a dozen CMSs and I have to say, as an engineer, I like Tina the most.
+                - generic [ref=e693]:
+                  - img "Peter Rusin avatar" [ref=e694]
+                  - generic [ref=e695]:
+                    - heading "Peter Rusin" [level=4] [ref=e696]
+                    - paragraph [ref=e697]: September 5, 2023
+            - link [ref=e699] [cursor=pointer]:
+              - /url: https://www.shaunpearce.ie/
+              - figure [ref=e700]:
+                - img "quotation" [ref=e701]
+                - blockquote [ref=e702]:
+                  - paragraph [ref=e704]: Tina's in-context editor cannot be beaten, we’re all in on it.
+                - generic [ref=e705]:
+                  - img "Sean Pearce avatar" [ref=e706]
+                  - generic [ref=e707]:
+                    - heading "Sean Pearce" [level=4] [ref=e708]
+                    - paragraph [ref=e709]: March 30, 2023
+            - link [ref=e711] [cursor=pointer]:
+              - /url: https://twitter.com/rascode11/status/1600175861621088266
+              - figure [ref=e712]:
+                - img "quotation" [ref=e713]
+                - blockquote [ref=e714]:
+                  - paragraph [ref=e716]: "@tinacms is a dream come true."
+                - generic [ref=e717]:
+                  - img "rascode avatar" [ref=e718]
+                  - generic [ref=e719]:
+                    - heading "rascode" [level=4] [ref=e720]
+                    - paragraph [ref=e721]: "@rascode11–December 6, 2022"
+          - generic [ref=e722]:
+            - link [ref=e724] [cursor=pointer]:
+              - /url: https://x.com/madewith_react/status/1854188254716645700
+              - figure [ref=e725]:
+                - img "quotation" [ref=e726]
+                - blockquote [ref=e727]:
+                  - paragraph [ref=e729]: Add real-time content editing to your React websites with TinaCMS, an open-source toolkit to create visual editing experiences
+                - generic [ref=e730]:
+                  - img "MadeWithReactJS avatar" [ref=e731]
+                  - generic [ref=e732]:
+                    - heading "MadeWithReactJS" [level=4] [ref=e733]
+                    - paragraph [ref=e734]: "@madewith_react–November 6, 2024"
+            - link [ref=e736] [cursor=pointer]:
+              - /url: https://x.com/quentinbdb/status/1847795017416401229
+              - figure [ref=e737]:
+                - img "quotation" [ref=e738]
+                - blockquote [ref=e739]:
+                  - generic [ref=e740]:
+                    - paragraph [ref=e741]: Very happy to finally release the new website !
+                    - paragraph [ref=e742]: There is still a few things to add and adjust, but it will be easy to do so! We built it on Astro & TinaCMS for speed and collaboration!
+                - generic [ref=e743]:
+                  - img "ffmad.xcp avatar" [ref=e744]
+                  - generic [ref=e745]:
+                    - heading "ffmad.xcp" [level=4] [ref=e746]
+                    - paragraph [ref=e747]: "@quentinbdb–October 19, 2024"
+            - link [ref=e749] [cursor=pointer]:
+              - /url: https://x.com/CrowderSoup/status/1839722550232003048
+              - figure [ref=e750]:
+                - img "quotation" [ref=e751]
+                - blockquote [ref=e752]:
+                  - paragraph [ref=e754]: Whoa, this works with Hugo (which I'm currently using). Definitely going to have to play with this over the weekend.
+                - generic [ref=e755]:
+                  - img "Aaron Crowder avatar" [ref=e756]
+                  - generic [ref=e757]:
+                    - heading "Aaron Crowder" [level=4] [ref=e758]
+                    - paragraph [ref=e759]: "@CrowderSoup–September 27, 2024"
+            - link [ref=e761] [cursor=pointer]:
+              - /url: https://x.com/cassidoo/status/1839650659735663054
+              - figure [ref=e762]:
+                - img "quotation" [ref=e763]
+                - blockquote [ref=e764]:
+                  - paragraph [ref=e766]: TinaCMS is what I use and I love it!
+                - generic [ref=e767]:
+                  - img "Cassidy avatar" [ref=e768]
+                  - generic [ref=e769]:
+                    - heading "Cassidy" [level=4] [ref=e770]
+                    - paragraph [ref=e771]: "@cassidoo–September 26, 2024"
+            - link [ref=e773] [cursor=pointer]:
+              - /url: https://x.com/manucoffin/status/1825455891421802720
+              - figure [ref=e774]:
+                - img "quotation" [ref=e775]
+                - blockquote [ref=e776]:
+                  - paragraph [ref=e778]: I just built a complete blog structure for my upcoming project with TinaCMS in 2 minutes. And it worked perfectly on the first try
+                - generic [ref=e779]:
+                  - img "Manu Coffin avatar" [ref=e780]
+                  - generic [ref=e781]:
+                    - heading "Manu Coffin" [level=4] [ref=e782]
+                    - paragraph [ref=e783]: "@manucoffin–August 18, 2024"
+            - link [ref=e785] [cursor=pointer]:
+              - /url: https://twitter.com/arzafran/status/1719387497564708956
+              - figure [ref=e786]:
+                - img "quotation" [ref=e787]
+                - blockquote [ref=e788]:
+                  - paragraph [ref=e790]: From complaining here, to merged PR in less than 24hs, incredible customer experience by TinaCMS. Their CEO jumped on a call, listened to all our issues and took notes, but not on imaginary paper, feels like fixes where WIP as we were describing them.
+                - generic [ref=e791]:
+                  - img "Arzafran avatar" [ref=e792]
+                  - generic [ref=e793]:
+                    - heading "Arzafran" [level=4] [ref=e794]
+                    - paragraph [ref=e795]: "@arzafran–October 31, 2023"
+            - link [ref=e797] [cursor=pointer]:
+              - /url: https://twitter.com/struhy_xd/status/1706770885254787099
+              - figure [ref=e798]:
+                - img "quotation" [ref=e799]
+                - blockquote [ref=e800]:
+                  - paragraph [ref=e802]: Oh wow, I thought Sanity was good, but @tinacms is all I need.
+                - generic [ref=e803]:
+                  - img "Boko Colse avatar" [ref=e804]
+                  - generic [ref=e805]:
+                    - heading "Boko Colse" [level=4] [ref=e806]
+                    - paragraph [ref=e807]: "@struhy_xd–September 26, 2023"
+            - link [ref=e809] [cursor=pointer]:
+              - /url: https://twitter.com/smashingmag/status/1703886402704842990
+              - figure [ref=e810]:
+                - img "quotation" [ref=e811]
+                - blockquote [ref=e812]:
+                  - paragraph [ref=e814]: With the recent integration of TinaCMS, SmashingMag enjoys the best of both worlds — the performance benefits of static assets and the writing experience that helps streamline the editing process.
+                - generic [ref=e815]:
+                  - img "Smashing Magazine avatar" [ref=e816]
+                  - generic [ref=e817]:
+                    - heading "Smashing Magazine" [level=4] [ref=e818]
+                    - paragraph [ref=e819]: "@smashingmag–September 18, 2023"
+            - link [ref=e821] [cursor=pointer]:
+              - /url: https://discord.com/channels/835168149439643678/848932514911354880/1113764832668299274
+              - figure [ref=e822]:
+                - img "quotation" [ref=e823]
+                - blockquote [ref=e824]:
+                  - paragraph [ref=e826]: It’s absolutely amazing. Its so simple to install, the typed NextJS integration is amazing, the live editor is as good as it gets. And compared to other CMSs, the admin is incredibly easy for editors to understand and use.
+                - generic [ref=e827]:
+                  - img "Dave Keen avatar" [ref=e828]
+                  - generic [ref=e829]:
+                    - heading "Dave Keen" [level=4] [ref=e830]
+                    - paragraph [ref=e831]: "@ccapndave–June 7, 2023"
+            - link [ref=e833] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=PcgnJDILv4w&lc=Ugy92XCmtPug2_1Lr554AaABAg
+              - figure [ref=e834]:
+                - img "quotation" [ref=e835]
+                - blockquote [ref=e836]:
+                  - paragraph [ref=e838]: Just found this and I think I am already in love.
+                - generic [ref=e839]:
+                  - img "Billy Best avatar" [ref=e840]
+                  - generic [ref=e841]:
+                    - heading "Billy Best" [level=4] [ref=e842]
+                    - paragraph [ref=e843]: "@billybest5276–August 6, 2023"
+            - link [ref=e845] [cursor=pointer]:
+              - /url: https://discord.com/channels/835168149439643678/848932514911354880/1118255235706663103
+              - figure [ref=e846]:
+                - img "quotation" [ref=e847]
+                - blockquote [ref=e848]:
+                  - paragraph [ref=e850]: Just tried out click-to-edit and it's really awesome. Super easy to use and to setup, love that it's fully typed and works passed down as a prop, kinda feels like magic tbh.
+                - generic [ref=e851]:
+                  - img "Mravec avatar" [ref=e852]
+                  - generic [ref=e853]:
+                    - heading "Mravec" [level=4] [ref=e854]
+                    - paragraph [ref=e855]: "@mravec–June 14, 2023"
+            - link [ref=e857] [cursor=pointer]:
+              - /url: https://rusin.work
+              - figure [ref=e858]:
+                - img "quotation" [ref=e859]
+                - blockquote [ref=e860]:
+                  - paragraph [ref=e862]: I tried a dozen CMSs and I have to say, as an engineer, I like Tina the most.
+                - generic [ref=e863]:
+                  - img "Peter Rusin avatar" [ref=e864]
+                  - generic [ref=e865]:
+                    - heading "Peter Rusin" [level=4] [ref=e866]
+                    - paragraph [ref=e867]: September 5, 2023
+            - link [ref=e869] [cursor=pointer]:
+              - /url: https://www.shaunpearce.ie/
+              - figure [ref=e870]:
+                - img "quotation" [ref=e871]
+                - blockquote [ref=e872]:
+                  - paragraph [ref=e874]: Tina's in-context editor cannot be beaten, we’re all in on it.
+                - generic [ref=e875]:
+                  - img "Sean Pearce avatar" [ref=e876]
+                  - generic [ref=e877]:
+                    - heading "Sean Pearce" [level=4] [ref=e878]
+                    - paragraph [ref=e879]: March 30, 2023
+            - link [ref=e881] [cursor=pointer]:
+              - /url: https://twitter.com/rascode11/status/1600175861621088266
+              - figure [ref=e882]:
+                - img "quotation" [ref=e883]
+                - blockquote [ref=e884]:
+                  - paragraph [ref=e886]: "@tinacms is a dream come true."
+                - generic [ref=e887]:
+                  - img "rascode avatar" [ref=e888]
+                  - generic [ref=e889]:
+                    - heading "rascode" [level=4] [ref=e890]
+                    - paragraph [ref=e891]: "@rascode11–December 6, 2022"
+          - generic [ref=e892]:
+            - link [ref=e894] [cursor=pointer]:
+              - /url: https://x.com/madewith_react/status/1854188254716645700
+              - figure [ref=e895]:
+                - img "quotation" [ref=e896]
+                - blockquote [ref=e897]:
+                  - paragraph [ref=e899]: Add real-time content editing to your React websites with TinaCMS, an open-source toolkit to create visual editing experiences
+                - generic [ref=e900]:
+                  - img "MadeWithReactJS avatar" [ref=e901]
+                  - generic [ref=e902]:
+                    - heading "MadeWithReactJS" [level=4] [ref=e903]
+                    - paragraph [ref=e904]: "@madewith_react–November 6, 2024"
+            - link [ref=e906] [cursor=pointer]:
+              - /url: https://x.com/quentinbdb/status/1847795017416401229
+              - figure [ref=e907]:
+                - img "quotation" [ref=e908]
+                - blockquote [ref=e909]:
+                  - generic [ref=e910]:
+                    - paragraph [ref=e911]: Very happy to finally release the new website !
+                    - paragraph [ref=e912]: There is still a few things to add and adjust, but it will be easy to do so! We built it on Astro & TinaCMS for speed and collaboration!
+                - generic [ref=e913]:
+                  - img "ffmad.xcp avatar" [ref=e914]
+                  - generic [ref=e915]:
+                    - heading "ffmad.xcp" [level=4] [ref=e916]
+                    - paragraph [ref=e917]: "@quentinbdb–October 19, 2024"
+            - link [ref=e919] [cursor=pointer]:
+              - /url: https://x.com/CrowderSoup/status/1839722550232003048
+              - figure [ref=e920]:
+                - img "quotation" [ref=e921]
+                - blockquote [ref=e922]:
+                  - paragraph [ref=e924]: Whoa, this works with Hugo (which I'm currently using). Definitely going to have to play with this over the weekend.
+                - generic [ref=e925]:
+                  - img "Aaron Crowder avatar" [ref=e926]
+                  - generic [ref=e927]:
+                    - heading "Aaron Crowder" [level=4] [ref=e928]
+                    - paragraph [ref=e929]: "@CrowderSoup–September 27, 2024"
+            - link [ref=e931] [cursor=pointer]:
+              - /url: https://x.com/cassidoo/status/1839650659735663054
+              - figure [ref=e932]:
+                - img "quotation" [ref=e933]
+                - blockquote [ref=e934]:
+                  - paragraph [ref=e936]: TinaCMS is what I use and I love it!
+                - generic [ref=e937]:
+                  - img "Cassidy avatar" [ref=e938]
+                  - generic [ref=e939]:
+                    - heading "Cassidy" [level=4] [ref=e940]
+                    - paragraph [ref=e941]: "@cassidoo–September 26, 2024"
+            - link [ref=e943] [cursor=pointer]:
+              - /url: https://x.com/manucoffin/status/1825455891421802720
+              - figure [ref=e944]:
+                - img "quotation" [ref=e945]
+                - blockquote [ref=e946]:
+                  - paragraph [ref=e948]: I just built a complete blog structure for my upcoming project with TinaCMS in 2 minutes. And it worked perfectly on the first try
+                - generic [ref=e949]:
+                  - img "Manu Coffin avatar" [ref=e950]
+                  - generic [ref=e951]:
+                    - heading "Manu Coffin" [level=4] [ref=e952]
+                    - paragraph [ref=e953]: "@manucoffin–August 18, 2024"
+            - link [ref=e955] [cursor=pointer]:
+              - /url: https://twitter.com/arzafran/status/1719387497564708956
+              - figure [ref=e956]:
+                - img "quotation" [ref=e957]
+                - blockquote [ref=e958]:
+                  - paragraph [ref=e960]: From complaining here, to merged PR in less than 24hs, incredible customer experience by TinaCMS. Their CEO jumped on a call, listened to all our issues and took notes, but not on imaginary paper, feels like fixes where WIP as we were describing them.
+                - generic [ref=e961]:
+                  - img "Arzafran avatar" [ref=e962]
+                  - generic [ref=e963]:
+                    - heading "Arzafran" [level=4] [ref=e964]
+                    - paragraph [ref=e965]: "@arzafran–October 31, 2023"
+            - link [ref=e967] [cursor=pointer]:
+              - /url: https://twitter.com/struhy_xd/status/1706770885254787099
+              - figure [ref=e968]:
+                - img "quotation" [ref=e969]
+                - blockquote [ref=e970]:
+                  - paragraph [ref=e972]: Oh wow, I thought Sanity was good, but @tinacms is all I need.
+                - generic [ref=e973]:
+                  - img "Boko Colse avatar" [ref=e974]
+                  - generic [ref=e975]:
+                    - heading "Boko Colse" [level=4] [ref=e976]
+                    - paragraph [ref=e977]: "@struhy_xd–September 26, 2023"
+            - link [ref=e979] [cursor=pointer]:
+              - /url: https://twitter.com/smashingmag/status/1703886402704842990
+              - figure [ref=e980]:
+                - img "quotation" [ref=e981]
+                - blockquote [ref=e982]:
+                  - paragraph [ref=e984]: With the recent integration of TinaCMS, SmashingMag enjoys the best of both worlds — the performance benefits of static assets and the writing experience that helps streamline the editing process.
+                - generic [ref=e985]:
+                  - img "Smashing Magazine avatar" [ref=e986]
+                  - generic [ref=e987]:
+                    - heading "Smashing Magazine" [level=4] [ref=e988]
+                    - paragraph [ref=e989]: "@smashingmag–September 18, 2023"
+            - link [ref=e991] [cursor=pointer]:
+              - /url: https://discord.com/channels/835168149439643678/848932514911354880/1113764832668299274
+              - figure [ref=e992]:
+                - img "quotation" [ref=e993]
+                - blockquote [ref=e994]:
+                  - paragraph [ref=e996]: It’s absolutely amazing. Its so simple to install, the typed NextJS integration is amazing, the live editor is as good as it gets. And compared to other CMSs, the admin is incredibly easy for editors to understand and use.
+                - generic [ref=e997]:
+                  - img "Dave Keen avatar" [ref=e998]
+                  - generic [ref=e999]:
+                    - heading "Dave Keen" [level=4] [ref=e1000]
+                    - paragraph [ref=e1001]: "@ccapndave–June 7, 2023"
+            - link [ref=e1003] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=PcgnJDILv4w&lc=Ugy92XCmtPug2_1Lr554AaABAg
+              - figure [ref=e1004]:
+                - img "quotation" [ref=e1005]
+                - blockquote [ref=e1006]:
+                  - paragraph [ref=e1008]: Just found this and I think I am already in love.
+                - generic [ref=e1009]:
+                  - img "Billy Best avatar" [ref=e1010]
+                  - generic [ref=e1011]:
+                    - heading "Billy Best" [level=4] [ref=e1012]
+                    - paragraph [ref=e1013]: "@billybest5276–August 6, 2023"
+            - link [ref=e1015] [cursor=pointer]:
+              - /url: https://discord.com/channels/835168149439643678/848932514911354880/1118255235706663103
+              - figure [ref=e1016]:
+                - img "quotation" [ref=e1017]
+                - blockquote [ref=e1018]:
+                  - paragraph [ref=e1020]: Just tried out click-to-edit and it's really awesome. Super easy to use and to setup, love that it's fully typed and works passed down as a prop, kinda feels like magic tbh.
+                - generic [ref=e1021]:
+                  - img "Mravec avatar" [ref=e1022]
+                  - generic [ref=e1023]:
+                    - heading "Mravec" [level=4] [ref=e1024]
+                    - paragraph [ref=e1025]: "@mravec–June 14, 2023"
+            - link [ref=e1027] [cursor=pointer]:
+              - /url: https://rusin.work
+              - figure [ref=e1028]:
+                - img "quotation" [ref=e1029]
+                - blockquote [ref=e1030]:
+                  - paragraph [ref=e1032]: I tried a dozen CMSs and I have to say, as an engineer, I like Tina the most.
+                - generic [ref=e1033]:
+                  - img "Peter Rusin avatar" [ref=e1034]
+                  - generic [ref=e1035]:
+                    - heading "Peter Rusin" [level=4] [ref=e1036]
+                    - paragraph [ref=e1037]: September 5, 2023
+            - link [ref=e1039] [cursor=pointer]:
+              - /url: https://www.shaunpearce.ie/
+              - figure [ref=e1040]:
+                - img "quotation" [ref=e1041]
+                - blockquote [ref=e1042]:
+                  - paragraph [ref=e1044]: Tina's in-context editor cannot be beaten, we’re all in on it.
+                - generic [ref=e1045]:
+                  - img "Sean Pearce avatar" [ref=e1046]
+                  - generic [ref=e1047]:
+                    - heading "Sean Pearce" [level=4] [ref=e1048]
+                    - paragraph [ref=e1049]: March 30, 2023
+            - link [ref=e1051] [cursor=pointer]:
+              - /url: https://twitter.com/rascode11/status/1600175861621088266
+              - figure [ref=e1052]:
+                - img "quotation" [ref=e1053]
+                - blockquote [ref=e1054]:
+                  - paragraph [ref=e1056]: "@tinacms is a dream come true."
+                - generic [ref=e1057]:
+                  - img "rascode avatar" [ref=e1058]
+                  - generic [ref=e1059]:
+                    - heading "rascode" [level=4] [ref=e1060]
+                    - paragraph [ref=e1061]: "@rascode11–December 6, 2022"
+      - generic [ref=e1063]:
+        - generic [ref=e1064]:
+          - generic [ref=e1065]:
+            - link [ref=e1066] [cursor=pointer]:
+              - /url: https://www.youtube.com/watch?v=lqqduKKhH_o
+            - generic [ref=e1067]:
+              - img "TinaCMS for GitHub - The SSW Rules Migration" [ref=e1070]
+              - generic [ref=e1071]:
+                - generic [ref=e1072]:
+                  - paragraph [ref=e1073]: 16 JAN, 2026
+                  - generic [ref=e1074]: Featured
+                - heading "TinaCMS for GitHub - The SSW Rules Migration" [level=3] [ref=e1075]
+                - paragraph [ref=e1076]: Jake walks you through the migration of the SSW Rules site from Decap CMS and Gatsby to Tina CMS and Next.js.
+                - paragraph [ref=e1077]:
+                  - text: By
+                  - link "Jake Bayliss" [ref=e1078] [cursor=pointer]:
+                    - /url: https://www.ssw.com.au/people/jake-bayliss/
+          - heading "Recent Videos" [level=2] [ref=e1079]
+          - generic [ref=e1080]:
+            - generic [ref=e1081]:
+              - button "Play YouTube video player" [ref=e1083] [cursor=pointer]:
+                - img "Play YouTube video" [ref=e1084]
+              - generic [ref=e1087]: 19 MAR, 2026
+              - link "Vibe Coding TinaCMS Custom Components" [ref=e1088] [cursor=pointer]:
+                - /url: https://www.youtube.com/watch?v=TE72AZQODaw
+                - heading "Vibe Coding TinaCMS Custom Components" [level=3] [ref=e1089]
+              - generic [ref=e1090]:
+                - text: By
+                - link "THOMAS SEPANOSIAN" [ref=e1091] [cursor=pointer]:
+                  - /url: https://www.ssw.com.au/people/thomas-sepanosian/
+            - generic [ref=e1092]:
+              - button "Play YouTube video player" [ref=e1094] [cursor=pointer]:
+                - img "Play YouTube video" [ref=e1095]
+              - generic [ref=e1098]: 19 FEB, 2026
+              - link "Why TinaCloud Works So Well with GitHub | TinaCMS Data Layer" [ref=e1099] [cursor=pointer]:
+                - /url: https://www.youtube.com/watch?v=TatnNqKPKIQ
+                - heading "Why TinaCloud Works So Well with GitHub | TinaCMS Data Layer" [level=3] [ref=e1100]
+              - generic [ref=e1101]:
+                - text: By
+                - link "ELI KENT" [ref=e1102] [cursor=pointer]:
+                  - /url: https://www.ssw.com.au/people/eli-kent/
+        - generic [ref=e1103]:
+          - heading "Blog Posts" [level=3] [ref=e1104]
+          - generic [ref=e1105]:
+            - generic [ref=e1106]:
+              - generic [ref=e1107]: 20 MAR, 2026
+              - link "Vibe blogging with GitHub Copilot & TinaCMS" [ref=e1108] [cursor=pointer]:
+                - /url: /blog/customblog_tinacmsai
+                - heading "Vibe blogging with GitHub Copilot & TinaCMS" [level=3] [ref=e1109]
+              - generic [ref=e1113]: By TINACMS TEAM
+            - generic [ref=e1114]:
+              - generic [ref=e1115]: 16 FEB, 2026
+              - link "Vibe Coding TinaCMS Custom Components" [ref=e1116] [cursor=pointer]:
+                - /url: /blog/vibecodingcomponents_blog
+                - heading "Vibe Coding TinaCMS Custom Components" [level=3] [ref=e1117]
+              - generic [ref=e1121]: By TINACMS TEAM
+            - generic [ref=e1122]:
+              - generic [ref=e1123]: 8 JAN, 2026
+              - link "Why TinaCloud Works So Well with GitHub" [ref=e1124] [cursor=pointer]:
+                - /url: /blog/data_layer_blog
+                - heading "Why TinaCloud Works So Well with GitHub" [level=3] [ref=e1125]
+              - generic [ref=e1129]: By TINACMS TEAM
+            - link "READ MORE BLOGS" [ref=e1130] [cursor=pointer]:
+              - /url: /blog
+              - text: READ MORE BLOGS
+              - img [ref=e1131]
+      - generic [ref=e1134]:
+        - generic [ref=e1135]:
+          - paragraph [ref=e1136]: Our Services
+          - heading "Professional Help?" [level=2] [ref=e1137]
+          - paragraph [ref=e1138]: Whether you're launching your first project or managing content at scale, the TinaCMS team is here to help.
+        - generic [ref=e1139]:
+          - generic [ref=e1140]:
+            - img [ref=e1141]
+            - heading "Priority Support" [level=3] [ref=e1144]
+            - paragraph [ref=e1145]: Get direct access to TinaCMS expert developers for technical blockers, troubleshooting, and architectural advice.
+            - generic [ref=e1146]:
+              - generic [ref=e1147]:
+                - generic [ref=e1148]: "1"
+                - generic [ref=e1149]: Priority bug fixes
+              - generic [ref=e1150]:
+                - generic [ref=e1151]: "2"
+                - generic [ref=e1152]: Architecture and best-practice guidance
+              - generic [ref=e1153]:
+                - generic [ref=e1154]: "3"
+                - generic [ref=e1155]: Dedicated support contact
+            - link "Read more about Priority Support" [ref=e1156] [cursor=pointer]:
+              - /url: /professional-services#priority-support
+              - text: Read more
+              - generic [ref=e1157]: about Priority Support
+              - img [ref=e1158]
+          - generic [ref=e1160]:
+            - img [ref=e1161]
+            - heading "Onboarding" [level=3] [ref=e1164]
+            - paragraph [ref=e1165]: Accelerate your TinaCMS adoption with hands-on onboarding from our team. From initial setup to editorial training, we'll get your team productive fast.
+            - generic [ref=e1166]:
+              - generic [ref=e1167]:
+                - generic [ref=e1168]: "1"
+                - generic [ref=e1169]: Migration assistance from other CMS platforms
+              - generic [ref=e1170]:
+                - generic [ref=e1171]: "2"
+                - generic [ref=e1172]: Custom configuration
+              - generic [ref=e1173]:
+                - generic [ref=e1174]: "3"
+                - generic [ref=e1175]: Team training sessions
+            - link "Read more about Onboarding" [ref=e1176] [cursor=pointer]:
+              - /url: /professional-services#onboarding
+              - text: Read more
+              - generic [ref=e1177]: about Onboarding
+              - img [ref=e1178]
+          - generic [ref=e1180]:
+            - img [ref=e1181]
+            - heading "Custom Features" [level=3] [ref=e1184]
+            - paragraph [ref=e1185]: Need something unique? Our team builds custom plugins, integrations, and features that extend TinaCMS to fit your exact content workflow.
+            - generic [ref=e1186]:
+              - generic [ref=e1187]:
+                - generic [ref=e1188]: "1"
+                - generic [ref=e1189]: Custom plugin development
+              - generic [ref=e1190]:
+                - generic [ref=e1191]: "2"
+                - generic [ref=e1192]: Third-party integrations
+              - generic [ref=e1193]:
+                - generic [ref=e1194]: "3"
+                - generic [ref=e1195]: Tailored editing workflows
+            - link "Read more about Custom Features" [ref=e1196] [cursor=pointer]:
+              - /url: /professional-services#custom-features
+              - text: Read more
+              - generic [ref=e1197]: about Custom Features
+              - img [ref=e1198]
+      - generic [ref=e1202]:
+        - generic:
+          - img "Tina Llama Outline"
+        - generic [ref=e1203]:
+          - heading "Talk to a Tina Expert" [level=2] [ref=e1204]
+          - paragraph [ref=e1205]: Evaluating Tina for your project? Book a 30-minute call with a TinaCMS Architect
+          - button "Schedule Call" [ref=e1209] [cursor=pointer]
+    - contentinfo [ref=e1210]:
+      - generic [ref=e1211]:
+        - generic [ref=e1213]:
+          - link [ref=e1215] [cursor=pointer]:
+            - /url: /
+            - img [ref=e1217]
+          - generic [ref=e1220]:
+            - generic [ref=e1221]:
+              - paragraph [ref=e1222]: Product
+              - link "Showcase" [ref=e1223] [cursor=pointer]:
+                - /url: /showcase
+                - generic [ref=e1224]: Showcase
+              - link "TinaCloud" [ref=e1225] [cursor=pointer]:
+                - /url: https://app.tina.io
+                - generic [ref=e1226]: TinaCloud
+              - link "How Tina Works" [ref=e1227] [cursor=pointer]:
+                - /url: /docs/product-tour
+                - generic [ref=e1228]: How Tina Works
+              - link "Roadmap" [ref=e1229] [cursor=pointer]:
+                - /url: /roadmap
+                - generic [ref=e1230]: Roadmap
+              - link "Compare Tina" [ref=e1231] [cursor=pointer]:
+                - /url: /compare-tina
+                - generic [ref=e1232]: Compare Tina
+            - generic [ref=e1233]:
+              - paragraph [ref=e1234]: Resources
+              - link "Blog" [ref=e1235] [cursor=pointer]:
+                - /url: /blog
+                - generic [ref=e1236]: Blog
+              - link "Documentation" [ref=e1237] [cursor=pointer]:
+                - /url: /docs
+                - generic [ref=e1238]: Documentation
+              - link "Examples" [ref=e1239] [cursor=pointer]:
+                - /url: /examples
+                - generic [ref=e1240]: Examples
+              - link "Support" [ref=e1241] [cursor=pointer]:
+                - /url: /docs/support
+                - generic [ref=e1242]: Support
+              - link "Media" [ref=e1243] [cursor=pointer]:
+                - /url: /media
+                - generic [ref=e1244]: Media
+            - generic [ref=e1245]:
+              - paragraph
+              - group [ref=e1246] [cursor=pointer]:
+                - generic "What's New" [ref=e1247]
+              - group [ref=e1248] [cursor=pointer]:
+                - generic "Use Cases" [ref=e1249]
+              - group [ref=e1250] [cursor=pointer]:
+                - generic "Benefits" [ref=e1251]
+              - group [ref=e1252] [cursor=pointer]:
+                - generic "Integrations" [ref=e1253]
+            - generic [ref=e1256]:
+              - heading "Join the Herd!" [level=2] [ref=e1257]
+              - paragraph [ref=e1258]: Join our coding community for the latest tips and news.
+              - generic [ref=e1259]:
+                - generic [ref=e1260]:
+                  - textbox "First name" [ref=e1261]
+                  - textbox "Last name" [ref=e1262]
+                - textbox "Email" [ref=e1263]
+                - textbox "Notes" [ref=e1264]
+                - button "Subscribe" [ref=e1266] [cursor=pointer]
+        - generic [ref=e1267]:
+          - generic [ref=e1268]:
+            - link "GitHub" [ref=e1269] [cursor=pointer]:
+              - /url: https://github.com/tinacms/tinacms
+              - img "GitHub" [ref=e1270]
+            - link "X" [ref=e1271] [cursor=pointer]:
+              - /url: https://x.com/tinacms
+              - img "X" [ref=e1272]
+            - link "Discord" [ref=e1273] [cursor=pointer]:
+              - /url: https://discord.com/invite/zumN63Ybpf
+              - img "Discord" [ref=e1274]
+            - link "YouTube" [ref=e1275] [cursor=pointer]:
+              - /url: https://www.youtube.com/@TinaCMS
+              - img "YouTube" [ref=e1276]
+            - link "LinkedIn" [ref=e1277] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/tinacms
+              - img "LinkedIn" [ref=e1278]
+            - link "Facebook" [ref=e1279] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61572968406294
+              - img "Facebook" [ref=e1280]
+          - generic [ref=e1281]:
+            - generic [ref=e1282]:
+              - link "Security" [ref=e1283] [cursor=pointer]:
+                - /url: /security
+              - link "Telemetry" [ref=e1284] [cursor=pointer]:
+                - /url: /telemetry
+              - link "Terms of Service" [ref=e1285] [cursor=pointer]:
+                - /url: /terms-of-service
+              - link "Privacy" [ref=e1286] [cursor=pointer]:
+                - /url: /privacy-notice
+              - link "License" [ref=e1287] [cursor=pointer]:
+                - /url: https://github.com/tinacms/tinacms/blob/master/LICENSE
+              - button "Contact Us" [ref=e1288]
+            - paragraph [ref=e1290]: © TinaCMS 2019–2026
+      - link "TinaCMS is maintained by SSW , Australia's leading software consultants" [ref=e1293] [cursor=pointer]:
+        - /url: https://www.ssw.com.au
+        - text: TinaCMS is maintained by
+        - img "SSW" [ref=e1294]
+        - generic [ref=e1305]: ","
+        - text: Australia's leading software consultants
+  - alert [ref=e1306]

@@ -1,0 +1,770 @@
+ 
+Hey everyone, you may have noticed that
+we've recently released playrite test
+agents. Agents to plan, generate, and
+heal your tests. In this video, I'm
+going to walk you through it step by
+step and explain what's happening under
+the hood so you can be as successful as
+possible in getting those agents,
+planning, generating, and healing those
+tests. Let's dive in.
+Make sure you update your VS Code to the
+latest version. You should see a little
+icon here with number one. And you just
+all you do is press restart to update.
+You need to make sure you're on version
+1.105
+of VS Code in order for it to work. So
+update VS Code. So go to the
+documentation and click on the get
+started button. And under playright
+test, you'll see a button called agents.
+So we click on this. It's a new page.
+And this is only available in Node.js
+for the moment. So this introduces our
+three agents, planner, generator, and
+healer. And there's a video here I
+encourage you to watch. And how to get
+started. So we have VS Code, Claude
+Code, and Open Code. That's what we
+support for the moment. So I'm going to
+use VS Code, and I can copy that here.
+And that's how I'm going to initialize
+those agents. So let's go over to VS
+Code and take a look. Now very important
+is to update Playright to the latest
+version. So we need to be on 1.56 of
+Playright. So I've already run the
+command to update playright. So make
+sure you do that first. Now I'll go
+ahead and just um clear this terminal so
+that we can see what's going on. And
+we're going to initialize our agents. So
+I'll go ahead and paste this command in
+here. MPX playright init- aents-loop
+equals VS code. Now once I run this,
+this is what we get. Some files have
+been generated for us. So let's take a
+look at them. First of all, in the
+GitHub folder under chat modes, we have
+generator, we have healer, and planner.
+They are our agents. Let's dive into
+them. So here we go. In the GitHub
+folder, we've got chat modes, planner.
+So what this is
+is basically um you use this agent when
+you need to create comprehensive test
+plans for a web application or website.
+And these are the tools that it's going
+to use in order to be able to do its
+job. And this is the job description
+that this planner, this agent has been
+given. Then we have our generator and
+these are the tools that it is using in
+order to generate playride tests and the
+instructions that it's been given in how
+to generate those tests. And then the
+healer use this agent when you need to
+debug and fix failing playright tests
+and the tools that it can use to do that
+and the instructions it needs to do to
+get its job done.
+The next thing that was generated is av
+folder and an MCP.json file. So under
+here we've got an MCP.json file and this
+is basically using a playwright test MCP
+server. So this is different to the
+playright test um to the playright MCP
+server the first one that we introduced.
+This is a different one called playright
+test specifically for testing. Now you
+don't need to go ahead and install it or
+set it up or run it or do anything
+because this is going to do it all for
+you. So basically I'm just showing you
+that it's here but we don't even need to
+worry about it. So these we can just
+close them because we don't need to
+worry about it. What we do need to look
+at is this file here which was generated
+the seed.spec file. Now this was
+generated inside my test folder inside
+the loggedin folder. So this is my test
+folder. There's my loggedin folder for
+all tests that are in a logged state.
+And this is the seed file that was
+generated. Now it's generated in this
+folder and not inside the logged out
+folder because that's the first project
+that I have in my playright config.
+So the seed file is something that you
+use in order to seed a test. So
+something that needs to happen before
+the test takes place. Now you might not
+need this and if you don't have anything
+to seed if you just have a simple test
+then you can just totally leave this
+blank or you might want to put in an
+await page.go go to for example into a
+logged in state or into the profile page
+and all your tests um will start from
+this particular URL. So everything that
+is used in this seed file will be copied
+by the LLM into each test that is
+generated. So basically if you want to
+seed a test get it into a specific um
+state before the LLM does its job this
+is what you want to use here. You might
+not need this and if you do then add
+this in here. So let me show you with a
+more complex example. I'm going to just
+quickly walk you through my application
+before I set up my seed and start using
+the agents. So this is my test folder.
+I've got some helpers in here. I've got
+a list test page which is basically a
+fixture custom fixture that uh basically
+creates a page and navigates to it. It
+creates lists and adds movies to them
+and adds images to the first movie in
+each list. and then it opens the list
+page so that then we can continue
+testing from that specific point. And
+I've got some list utilities which are
+just some functions that open lists um
+add movies etc. And then I've got my
+setup page which basically just uh uses
+storage state and logs into my
+application using process.n env uh to
+fill in the login and password and it
+basically just logs into the application
+for me and then I use um project
+dependencies in my playright config file
+um to run the setup test and basically
+then anything in the logged in in Chrome
+uh uses the dependency of setup and uses
+that storage state. Okay, so that's how
+my tests are set up. I've got some
+logged out tests already created here.
+We're not going to worry about them
+because what I want to do is create the
+loggedin tests using our Playright
+agents.
+So, what I'm going to do is I've already
+um got a seed file that I've used and
+I'm going to paste this in here because
+that's where I want my page to start.
+Now, let me just quickly show you the
+application over here. I've got it
+running on local host and I'm going to
+click on that login state. I'm going to
+fill in my email.
+I'm going to put in my password. Going
+to log in. Uh we don't need to save
+that. And then I'm going to go ahead and
+create a new list
+and I'll call it my list and I call it
+my fav movies.
+So this is um my application and
+basically what I'm showing you is where
+the agent is going to start the tests
+from. So these are and they can go ahead
+and choose an image. Select, select,
+select. So these are the um the list
+that it's going to start from and the
+LLM should now be able to just start
+from there and start generating those
+tests. So let's take a look and see if
+it can do that. We'll close this here.
+So as I said, this is the seed file
+using that page as my seed. And now I
+can go ahead and open the chat
+and choose my agent. So instead of
+agent, I'm going to use planner. The
+playright planner is the agent that I
+want to use. And you can see I have the
+seed file already added in here into the
+context. Otherwise, you could drag and
+drop and put it into here because we
+want the LLM to have access to this seed
+file. So what we want to do now is
+basically ask it to generate
+a test plan for the movies list feature.
+And let's just be explicit and ask it to
+save it as movies test plan in the specs
+folder. Now, I don't have a specs
+folder, but it should go ahead and
+create one for me. So, let's go ahead
+and run that
+and let's see what it does.
+So, it's going to help me generate a
+compre comprehensive um test plan for
+the movies list feature. It's going to
+start by setting up the page and
+exploring the application. So the first
+tool that it wants to run is the setup
+planner page from the playright test MCP
+server. And this one needs the seed file
+which is basically yes that's the seed
+file that we wanted to give it. So we
+can go ahead and allow. Now we can allow
+in this session in this workspace always
+allow. There's a setting in VS Code
+where you can allow absolutely
+everything which you totally shouldn't
+do but it's great for demos. But for
+this one let's just click on allow.
+So now it's setting up the planner page
+and it's going to go ahead and you can
+see it's just logged in, right? It's
+created that list. Okay. Um here we go.
+The list has just been created. The
+three movies have been added and three
+images have just been selected. So I'm
+now at this stage of this is where I
+want my agent to start testing. So the
+setup and all that has just been done.
+So that's pretty amazing.
+So it can see the movies list page is
+loaded. It's going to explore the
+application.
+um it's going to start doing stuff.
+Let's have a look in this here. Now, if
+we look in the setup planner page, the
+output two tests were run using one
+worker. So, the setup tests run and the
+log user in and verify profile access um
+was run. And you can see the page state
+and this is the actual page snapshot.
+And as you can see um there is no login
+in here in the page snapshot because I'm
+using the setup test. So, the LLM hasn't
+and doesn't have access to my login
+information here. So, that's pretty
+cool.
+Okay, so it's gone ahead and clicked and
+typed. It's run a page snapshot. It's
+run wait for and it's asking, can I
+allow that? So, yes, we want it to wait
+for the search results. We'll go ahead
+and do that.
+And let's just open the application. See
+where we are. There we go.
+And it's clicking. It's using the share
+one, uh, share my favorite movies. So,
+it's decided to to check that out.
+Okay.
+And I've auto approved some of this for
+this profile. That's why we're not
+seeing the allow on all of these tool
+calls.
+It's going to click outside the dialogue
+first to close it. There's no X button
+there. We should totally fix that in the
+application. We can do that later.
+Um,
+and then it's evaluating JavaScript. So,
+it's using the evaluate JavaScript
+playwright test um, in order to be able
+to find a way to close that dialogue.
+And there you go. So, it navigated to a
+URL and it's now going ahead. It's gone
+to the the movies details page. And now
+it wants me to run wait for. Um, let's
+go ahead and allow that.
+And we can check what's going on in
+here. So, it's run playrite code and
+it's just waiting for something to load.
+It found a couple of errors there and
+then it found the page snapshot and it's
+able to read through that. Now, it's
+exploring the menu and it now has a
+comprehensive understanding of the
+movies list feature. So it's now going
+to check if there's a specs folder
+and if not it's going to create one.
+That's great. So it just created the
+specs folder for me. So there we go
+here. And now it should start generating
+the test plan inside that specs folder.
+And there we have it. It's created
+movies test plan. So let's take a look
+at what it's done. This is a little a
+summary here. It's generated the plan,
+13 major categories.
+Um, and let's just go ahead and press
+keep. And let's open our movies, test
+plans, close our chat, and let's take a
+look at what it's done. So, you can see
+um a little bit of what it's decided to
+test and the scenarios, the seed. So,
+it's using the tests logged in
+seed.spec.ts file. That's perfect. So
+the first thing is viewing the existing
+list, the expected results,
+view movie posters and ratings. Uh
+navigate to movie details from list
+management actions expected results. So
+there's quite a few tests in here that
+you can go along and you could refine,
+you could add to, you could delete. Um
+this is quite complex, so it's pretty
+cool. And let's go ahead and generate
+some. So add and remove movies from a
+list. So, this looks like a pretty good
+section to do. And we've got a few.
+Navigate to add mo, remove movies, view
+current movies and list, search for
+movies, um, search for specific movie,
+add movie to a list, remove movie from a
+list, add duplicate movie handling,
+search with no results. Um, so that's
+pretty cool. Let's go ahead and just ask
+it to generate this particular section.
+But first of all, what we really should
+do is go ahead and commit our changes so
+that we don't lose our test plan at any
+stage. Let's just use AI to generate
+that commit message for us. And there we
+go. We've committed those. So that's
+good. And let's go ahead and open our
+chat. Okay. Always start with a new chat
+so you got a clean slate, a clean
+context for your agent to start working
+with. So now we've got planner. We're
+going to go ahead and use generator.
+And you can see I've got the um the
+movies test plan already in context. So
+I'm just going to un select here. So
+it's got the full movies test plan. And
+I'm going to basically say that I want
+it to generate
+a test for each point in the section
+four add remove from the list and save.
+generate a test for each point in the
+section four and save. And well, we
+don't need to tell it where to save it.
+I think that's enough. generate a test
+for each point in the section for add
+remove movies from list uh from the test
+plan.
+It already has the test plan in context.
+So it should just get that. But the more
+you um the more context you give it the
+better. So this should create a test
+generate a test for each uh let's just
+put a test file for each point in the
+section for add remove lo from list from
+the test plan. We're using our generator
+and we can go ahead and press play and
+see what it does.
+So, it's going to generate a test files
+for each scenario in section 4. Scenario
+would have been a better word. And the
+first thing it's going to do is run
+setup generator page. So, you can see
+the setup for the page that it's asking
+to use. There's the plan. Let's just
+click on see more so we can see. And you
+can see it's got 4.1 in there. And if we
+kind of go along here, um, you can see
+it's asking to use the seed file, um,
+which is the seedspec.ts. So, let's go
+ahead and allow that.
+And you can see it's started to log in.
+So, this is great.
+And we've got to our uh, our stage of
+our movie list where the three movies
+are on the page. So, now it should be
+able to go and execute the test steps.
+So you can see it's uh run click
+and it's run verify element list. Let me
+quickly um click on one of these so you
+can see what's going on here. Um so this
+is a new tool which is run verify
+element visible.
+And what this does is it's got the role
+of text box accessible name add item
+intent verify add item or search box is
+displayed with placeholder and the
+output result is done and it ran the
+playright code of await expect page get
+by ro text name add item to be visible.
+So this is a really cool tool to verify
+the element is visible on the page and
+then it's gone and retrieving a test
+log. Um so we want it wants to retrieve
+the performed test log. So let's go
+ahead and allow it to do this. So it has
+a full log um of what it has done before
+it actually goes ahead and writes the
+test.
+Okay, now it's going to run write test
+because we want it to write the test in
+the actual folder. Um so let's go ahead
+and allow it to write the test.
+And now it's going to go ahead and do
+the second scenario. And it's going to
+set up the um page for this second
+scenario, which is um 4.2 view current
+movies in list. Let's go ahead and allow
+that.
+And again, it's going to go through that
+section again and quickly um start
+performing the actions it needs to
+perform in order to test that specific
+scenario.
+It's running click in this one. It's
+view current movies in the list and it's
+verifying the list is visible on the
+page. So this is another tool verify
+list visible. Let's go in and select
+okay for that.
+And then it's retrieving the test log.
+So let's allow the test log
+and let's have a look. Um, oh well here,
+run write test. Let's go ahead and allow
+it to write the test and we can just
+quickly look at the test log. So the
+test log is basically a plan. Add remove
+movies from the list. View the current
+movies in list, the steps it needs to
+perform the expected results. And this
+is the test log and the actual TS file
+in here. Um, and it's using the seed
+setting up the fixture and then the
+steps it needs to do to perform and
+verify all the movies currently in the
+list. So this is how it ensures it does
+a really good job. Um now it's um on 4.3
+search for movies and again let's go
+ahead this time and allow in this
+session so they can go a little bit
+faster and run through each of these
+without having me having to allow on
+each one. So it's going to do um the 4.3
+then it's going to do 4.4 4.5 4.6 and
+4.7.
+Now, I've gone ahead and just sped up
+this part of the video just so you don't
+have to watch it go through each of
+those test steps for the generation
+phase.
+And there it is. Great. I've
+successfully generated test files for
+all the scenarios in section 4. So, it's
+going to create a summary. And it's
+telling me it's generated all those test
+files. So, let's actually go and take a
+look and see if they're there. So, in my
+loggedin file, there we go. Oh, it looks
+like we have them here. Add movie to
+list. Navigate to add. Remove movie.
+Remove movie. Search for specific.
+Search movies. View current movies. This
+looks good. Um, let's go ahead and take
+a look at them. So, the first one, we
+can go ahead and look at our test. And
+as you can see here, the seed was used.
+Uh, the spec file was used, the seed was
+used. But you can see I'm importing list
+test as test from my helper. So that's
+what I wanted the seed to be copied in.
+And you can see that the first thing I
+have is that the const page equals list
+page that was passed in from my seed. So
+my fixture is being passed in. And then
+it goes ahead and continues the test to
+the state that it needs to be in. So
+this is really really cool. That's doing
+exactly what I wanted to do. And every
+file will have that starting from that
+specific point because that's what I had
+in my seed file. Again, you might not
+have anything in your seed file or you
+might have a page uh go to in there. Um
+so that's cool. And again, you can go
+through this and you can decide, is this
+a good test? Do I need to modify? Do I
+need to do anything? Um at first glance,
+it looks really good. So I I'm just
+really eager to go ahead and run them
+and see if they actually work. So let's
+go ahead and do that. Um
+let's open up where I'm using the VS
+Code extension here for Playright. And
+I'm going to go ahead and run the test.
+But first of all, I just want to make
+sure that I have setup checked because
+if I don't have setup checked, it's not
+going to be able to log in. Remember, I
+need to log in first. So, I need to run
+that setup test just the first time it
+runs it. Um, so let's go ahead and press
+play for all the tests in the login
+folder. You can see the setup test is
+running first. It's logging me in and
+then it's able to go ahead and run each
+of those tests.
+Okay, this is looking really good. Now,
+I have show browser um checked. That's
+why we're able to see what's going on.
+And it looks like we have one test that
+has failed, maybe two.
+Two tests failed. Three tests have
+passed
+and it looks pretty good.
+Okay, that's cool. Let's take a look.
+Let's just close that browser. And we
+have two tests have failed. Okay, that's
+not too bad. Um, I can uncheck setup
+because when I run these again, it's
+going to use storage state and I don't
+need it to run that setup test again.
+So, let's just uncheck that.
+And let's now go ahead and take a look
+at the actual tests that are failing.
+Now this is basically um an expect
+locator to be visible has failed. Again
+we could use the um
+uh the we could reach for these uh
+messages here. We can fix with AI. We
+could debug it ourselves. Um but you
+know what? I'm actually going to get the
+healer to go and fix these for me. But
+first of all, and I think this is really
+really important. I'm going to go ahead
+and commit my changes.
+So, I'll go ahead and I'll add these
+into um git. These are just all my test
+files. That looks good. And let's commit
+those first just in case there's
+something that we don't want um the
+healer to do. But let's just make sure
+that everything is committed first. Now,
+let's go ahead and open my chat and
+let's create a new chat. And let's
+choose the healer. And
+what we can do is we can actually see
+what two files this one navigate to
+add remove movies. That was the one that
+failed. And what was the other one that
+failed? The search for specific movies.
+So let's go ahead and find that. Search
+for specific movies. So these two were
+the ones that failed. So we can go ahead
+and say run and fix uh tests.
+And let's see if it does. Oh, it only
+just take. Yeah. Yeah. No, it did take
+take took the two into context. That's
+great. Search for for specific movies
+and navigate to add movies. Now, it's
+going to start by running all tests to
+identify which ones are failing. That's
+fair enough. So, it's running um the run
+test from the playright test MCP server.
+It's using the project's Chromium.
+And let's go ahead and see how it does.
+So, all tests passed successfully
+because it ran the test in the project
+one, but I wanted it to run it in the um
+logged in one. So, if we look in here,
+we wanted it this one, the test logged
+in. All my logged out tests passed. So,
+I want this one to run. So, it's going
+to read these ones. It's running the
+list test. And it can see now it has a
+list of tests to run. So, which ones
+it's going to run? Add remove movies
+from the logged in folder. Um, add
+remove movies from list. And there it
+started to run that test. Let's quickly
+go back and see where has it got to.
+It's running the test in debug. It's
+debugging a single test here. So, this
+is a really um cool tool that it uses.
+It uses to debug a single test. Let's
+open that up. And you can see that it
+run two tests using one worker. It's run
+the um login setup the you log user in
+and verify the profile access and then
+it paused on the error. So it's able to
+pause on the actual error which is the
+get by placeholder search for movie
+expected visible. There's a strict mode
+violation get by placeholder. This is
+what the LLM is seeing. So this is how
+it's able to actually really do a good
+job. So this is really cool. Um let's
+let's go back to where we are. It ran
+the page snapshot and then it was able
+to basically say it can see the issue
+clearly. There are two issues in the
+navigate to add uh remove movies. The
+heading uh needs an exact true and the
+placeholder search for movie appears in
+two inputs. One in the header and one in
+the add item text box. So looking at the
+page snapshot, it notice the heading
+list my favorite movies.
+Okay. And and then it's going to go
+ahead and fix the test. And then it's
+going to run the test again to verify
+the tick that the the fix actually
+works. So it's running debug single test
+again. The first test is now passing.
+And then it's gone ahead and run the
+second failing test. So you can see it's
+run this test. Search for specific
+movie. And it's gone ahead and seen that
+it's failed on the expect locator to be
+visible. The menu item name incoming
+incoming um is it's failing on that one.
+and it can go ahead and read true the
+menu item, the page state, the page
+title, etc.
+So the issue is that the test typed
+inception and it's waiting for the
+search results, but looking at the
+snapshot, there's a list structure with
+a list item, but no visible menu items.
+So it run evaluate JavaScript and then
+look at this. It ran to list the network
+request. So it's asking me permission.
+Can the playright test MCB server run
+this tool to run a list of network
+requests? Let's go ahead and allow that.
+Let's take a look at what it's doing.
+Now it's actually going to the the
+database to get using all the HTTP
+requests and it's reading true all of
+those to see if it can find that movie
+from the API calls. That's really really
+cool. So good. It can see there was a
+successful API call to the um search
+movie with the query and it came back as
+okay. The search completed but the
+drop-own structure is different. Now,
+there's a reason here in this
+application, and that's because I get
+all my movies from the database, but
+then I kind of have a little filter um
+that just filters some of the movies
+out, and you know, that's not going to
+be visible on the site. Nobody's going
+to know that exists. That's why we've
+got movies with a mock Azure websites uh
+site. So it was able to see the page
+snapshot and it could see there's a list
+with a list item and it's reading
+through this and the basically uh it
+seems empty or not fully rendered. It's
+going to look at a working test to
+understand how it works. So this test
+passed so it seen that one test passed.
+So the drop down works and the problem
+is it's after typing inception. The
+problem is that we don't have that movie
+in the actual website. It is in the API
+call but not in the website because of
+the filtering we use. Um, so it's
+running true to see if it can find the
+reason why it's finding uh why it's not
+able to see that movie. And now it's
+going to run the console messages. So
+this is cool as well, which is another
+tool um that it can run is the um
+checking for the console for any errors.
+So run get console. Let's go ahead and
+allow that one.
+And then there's no relevant errors in
+the console.
+So it's going to look at the test
+expectations more carefully and um the
+fix the test to make it work properly
+with the autocomplete system. The test
+should click on the input which triggers
+the initial dropdown type the search
+term and wait for the specific response
+to that search term.
+Okay. So it's going to run the debug
+again. We're going to open this up.
+We're going to put in the search term
+and
+and you can see it types in inception
+and inception is not it's not seen in
+the drop down.
+So this is really cool because given
+that this appears to be an inherit
+application bug where the autocomplete
+doesn't work with programmatic text
+entry, it's going to mark this test as a
+fix me. So when it comes to a stage
+where it's like this should work, the
+drop down works, but this in this case
+it basically decided that it has high
+confidence the test is correct but the
+application behavior is broken. So, it's
+going to go in ahead and up update the
+test and it's going to add a fix me in
+there. And then it's going to run all
+those tests again. And the test is now
+being skipped as intended, shown by the
+status. And it's going to run all the
+tests to make sure the rest pass.
+And all tests have passed successfully.
+One of them um test fixed two and the
+issue. So, it goes through the issues
+here and the fix that it added. And then
+this one, the issue, and it marked the
+text as fix me with a detailed comment
+explaining the application behavior
+issue. And the autocomplete only works
+with the manual interaction and not with
+programmatic input via fill or press
+sequentially.
+so there you go. there. We can go ahead
+and let's just keep that
+because what we can do is because we
+have um used git we can basically look
+at the git diff and see exactly what it
+has done and make sure that is correct.
+So here we've got you know exact true
+has been added. So that looks good and
+here it's added a placeholder for search
+for movie to be visible. It removed that
+because it didn't need it because it was
+already the text box was there. That's
+fine. Now, this is um it's removing the
+first line of the test and it's saying
+this test is marked as fix me due to an
+dropdown does not properly populate when
+the text is entered. The API call
+succeeds um and the test was marked as
+fix me. Now you can decide if this is
+actually um correct or if basically this
+is
+something that we can just you know
+modify because I know if I write
+Deadpool in there this actual test will
+pass instead of using this movie because
+of the filtering that I have. But then
+again maybe that is an application bug.
+So it's kind of really cool that it
+actually added that in there. And then
+we can go ahead and review that and
+modify either the test or the
+application. And that is it. We can then
+go ahead and um we can commit those
+changes and we can go ahead and just run
+our tests here and just double make sure
+that they actually pass here um in VS
+Code.
+And that's it. That is playright agents.
+So make sure you start um using them
+today to uh write test plans to generate
+your tests based off those plans and
+heal any of those tests that are broken.
+Happy testing with playright agents
+everyone.

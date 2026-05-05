@@ -1,0 +1,91 @@
+ 
+Hi everyone. If you want reliable
+end-to-end tests for your web app that
+run across Chrome, Firefox, and Safari,
+Playride is an excellent choice. In this
+short guide, you'll learn how to install
+Playride, run your first test, and use
+the HTML reporter and UI mode to debug
+faster. Let's jump in. But first of all,
+what is Playright? Playright is a modern
+end-to-end testing framework. It ships a
+testr runner, assertions, test isolation
+and parallelization all in one package.
+It supports Chromium, WebKit, and
+Firefox on Mac OS, Windows, and Linux.
+Works headless or headed and even has
+mobile emulation. Installation is super
+easy. Open a terminal in your project
+folder and run npm in it playright at
+latest. This command either sets up a
+new project or adds Playright to an
+existing one. You can also use yarn
+create playrite or pnpm create playright
+if you prefer those package managers.
+During setup, you'll be asked a few
+quick questions. Choose TypeScript or
+JavaScript. TypeScript is a great
+default. Pick a test folder defaults to
+tests. Add a GitHub actions workflow if
+you want CI and confirm installing
+browsers. Accept the browser install so
+playright can download the required
+browser binaries. The initializer
+downloads browsers and creates a small
+scaffold playrite config.ts package JSON
+and a test folder with an example test.
+There's also a test examples with richer
+samples like a demo to-do app you can
+explore. The playright config is where
+you configure browsers retries timeouts
+reporters and more. Now let's run the
+example test. By default, Playright runs
+tests in headless mode, meaning with no
+UI and runs tests across all browsers in
+parallel. Run npx playright test.
+Playright will execute tests in
+Chromium, Firefox, and WebKit. If you
+want to watch the browsers visually,
+add-it
+npx playright test- headit.
+To run a single browser project, use-
+project equals chromium.
+to run one test file npx playright test
+example.spec.ts.
+When test complete, Playright can
+generate an interactive HTML report that
+helps you debug failures.
+Open it with npx playright show report.
+The report auto opens after failures.
+Otherwise, open it manually with the
+command. UI mode is fantastic for
+writing and debugging tests. Started
+with npx playright test-ui.
+In UI mode, we can see watch mode, live
+step views, and time travel debugging.
+UI mode reruns tests on changes, shows
+the exact steps your test performed, and
+lets you inspect the page state at any
+step. It's a massive productivity boost
+when you're authoring tests.
+To update Playright and browsers, run
+npm install-d at playwright/ test at
+latest. Npx playright install-with-deps
+to install the browsers.
+Uncheck the playright version with npx
+playright- version.
+Quick requirements. Use Node.js.
+Playright supports Mac OS, Windows, and
+modern Linux distributions. And now that
+you're set up, try these next steps.
+Open the example tests and run them. Use
+MPX Playright Codegen to record
+interactions and generate a test. And
+read to the Playright docs to learn
+fixtures, locators, and best practices.
+If this helped you, hit like and
+subscribe. I'll follow up with videos on
+writing tests using fixtures and
+advanced debugging. Tell me in the
+comments what you'd like to see. Thanks
+for watching.

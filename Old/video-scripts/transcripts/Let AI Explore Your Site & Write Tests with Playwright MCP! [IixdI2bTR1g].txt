@@ -1,0 +1,130 @@
+ 
+Hey everyone. I've got the MCP Playright
+server running here locally in my VSS
+code folder just in this project. And
+I've got a generate test prompt um that
+is basically using playwright and agent
+mode to create some tests based on
+exploring a website. So I've got no
+access to the actual uh test files here.
+I want a co-pilot and I want the agent
+to just go along and um use the MCP
+server to navigate to the website,
+search through the website as a user
+would navigate u browse it and come up
+with a couple of key functionalities and
+then write some tests based on the
+actual actions that it has performed. So
+uh we can see here it's trying to use
+the search function and it's going to
+type in Star Wars. Now look at this.
+Straight away the search term we call
+Star Wars. The search results say Star
+Wars, but the movie says kill. So,
+there's something going on there. Now, I
+need to actually go and fix that because
+that doesn't look like great, but that's
+a really good scenario that came up just
+now because when I've been testing this
+website, I've been putting in Garfield
+and Deadpool and Avengers and the
+results have been perfect every time.
+So, as far as I'm concerned, my search
+works. And I've just seen using the MCP
+server, my search doesn't work as
+expected. It's touched it's found an
+edge case that I didn't find. So, that's
+kind of really cool. Um, it's uh now
+going to use the theme toggle feature.
+So, it's clicking the toggle switch to
+change the theme. We're already in dark
+mode. It's now gone to light mode. So,
+uh that's great. It's searching that
+that works. Um, now I did ask it for
+only one test. So, um, it's just closed
+the browser there. I did ask it to do
+that. That's great. And it's going to
+summarize its findings. So, it'll be
+interesting to see what test it decides
+to write. Um so the exploration right
+it's on the homepage uh the search
+functionality the movie details page um
+giving a list of all that movie details
+and the theme toggle and the navigation.
+So there's five things it's found and
+it's going to implement a test for the
+movie search functionality. That's the
+one it's chosen as its favorite or the
+most uh important one. But because I
+have these other ones here, I can
+basically then say go ahead and write
+tests for all those other um
+functionalities. But I only wanted one
+just for this demo just to keep it quick
+and easy. Um so fixed a lint error
+there. That's that's great. Thank you,
+Agent Mood. And um now it's going to run
+the test to see if it works. So, it's
+opening up the terminal and it's going
+to run the test and running one test.
+And the test seems to have worked. The
+test passed. So, that is fantastic.
+There's our test. The test has passed.
+Now, we didn't see anything. We don't
+know if that works as it is meant to. It
+looks good to me. Uh code looks great.
+Um
+I mean, are we happy with that? I'm
+pretty happy with that. But we can
+always uh check it out and work it
+ourselves. So, uh, once agent mode is
+finished doing what it's doing, it's
+giving us a summary of all the things
+it's done. That's great because I can
+use that summary then to, um, you know,
+create a pull request and, um,
+make sure it's done what it's done. So,
+we'll go ahead and keep that file. Now,
+I'm just going to go in here to my test
+explorer and I'm going to choose, um,
+show trace viewer and I'm just going to
+press play here in VS Code. So, it's
+going to open up the trace viewer for
+me. And then I can go along and I can
+actually see um it's a little bit small
+there. So, let's just zoom in. Um and
+you can see, let's do it full size. You
+can see there. Search for movie. And
+there I typed in Star Wars and we got
+Star Wars back. So, it did actually
+search for that. Now, the movies might
+not update. That's just how the page um
+loading happens. But then it went along
+and clicked on Deadpool. And again,
+that's something that I could definitely
+go ahead and fix in the application
+itself. It's found Deadpool movie. And
+then it's gone ahead and clicked true um
+through the titles and checked to see if
+it has specific titles. Um and then it's
+gone ahead and we've got Star Wars and
+it's got checked for this. So again,
+this is pretty cool because you can go
+ahead and check uh what's just happened,
+what it's actually done, and uh then you
+can go back and basically improve that
+and iterate over it um and then create
+more tests. But that was pretty good for
+just literally navigate, explore this
+URL and uh use this uh test prompt file
+to to basically just come up with and I
+just said one, right? If I had had five,
+it would have given me five tests. So
+very very powerful. um things you can do
+with the Playright MCP. So, go ahead and
+test it out. Go and get it to explore a
+site and see what it comes up with.
+You'll be surprised how many bugs you
+might find uh and how many improvements
+you can make to your site. Hobby testing
+with Playride.

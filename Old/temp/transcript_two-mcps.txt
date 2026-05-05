@@ -1,0 +1,527 @@
+Hey everyone. Did you know that
+Playright has two MCP servers? In this
+video, I'm going to walk you through
+both of them and what's the difference
+between them so you can know which one
+you're using and choose which one to use
+for what. So, I've got VS Code here open
+and I've already got the Playright MCP
+server installed. Um, and I've already
+got the Playright test MCP server
+installed. So, I've got two MCP servers.
+Now, how do I know what I'm using? How
+do I know if I even have the Playright
+MCP server installed? You can go to your
+extensions tab and in here you can see
+what's installed for your extensions,
+but you can also see the MCP servers
+installed. I've got context 7 installed.
+I've got GitHub. I've got Microsoft
+Docs. I've got Playright. I can click
+here and I can read all about the
+Playright MCP. And I've also got
+Playright Test, which there's not much
+information here as you can see. Um, but
+it shows me that it's playright test and
+that's the official MCB server for
+testing that gets included when you run
+the agent command. Let me break it down
+a little bit. So, if you haven't already
+started using Playright, you can um
+install it very easily um in VS Code, in
+claude or in whatever you are using. And
+once you have it, you'll see that you
+have some tools here, right? So, I've
+got some tools here and I can just, you
+know, write Playright and I can see I've
+got Microsoft Playright MCP. That's the
+actual official MCP server for
+automating browser and doing whatever
+you want to do such as buying tables,
+filling out forms, or even testing. You
+can use it for whatever. Now, what's
+really interesting to check out is the
+tool calling. So, the tools are what the
+server is giving the LLM access to and
+what it's able to do. So for example the
+tools included in the playright MCP
+server browser click browser close
+browser console messages browser drag
+browser evaluate browser file upload
+browser fill form browser handle
+dialogue hover install navigate back
+press key resize select snapshots tabs
+take screenshots very cool um type and
+wait for so they are the tools available
+to me if I'm using the playright MCP
+server now there's also some other extra
+configurations that you can add in there
+and check out the the GitHub uh repo for
+that to understand a little bit more
+about it and also you'll be able to see
+how to install it uh using whatever
+you're using um be it VS code
+cursor etc. So check out the docs for a
+full list of how to easily install the
+player at MCP server if that is what you
+want to install.
+Now, um let's take a look at what is
+what am I going to use this for? Well, I
+can basically use this for anything such
+as um such as navigating to a website to
+uh get an idea of what it's about. So,
+you can say navigate. I can actually
+just use voice. It might be quicker than
+me typing. You ready? Let's do this.
+Navigate to debie.codes and tell me what
+Oh, I need to press stop listening.
+Okay, so navigate to debi codes and tell
+me what this website is about. So,
+sometimes typing is probably better. And
+I need to actually just go ahead and
+press um enter there. Let's see if this
+is enough. I'll help you navigate to
+Debbie codes and explore what the
+website is about. Now, you can see it's
+ran the tool running navigate to her URL
+um with the Microsoft Playright MCP
+server. And if we look in under here,
+um, you can see
+now you see we've got a URL. It got an
+error here, which is great, right? So
+you can see the input in here that the
+URL it decided was Debbie codes, but
+it's actually Debbie.codes, but it
+didn't understand me. Um, so the error
+name not resolved. And uh, then it's
+doing a little bit of work here. And it
+ran navigate URL. So it tried this
+Debbie. Didn't find it. So, let me try
+searching for Debbie codes to find the
+correct website. Now, I had this open on
+another screen. So, I'm sorry you didn't
+get to see this, but actually open
+Google and actually searched and then it
+found um the look there you go the URL
+google.com. So, it opened Google and it
+searched and it basically uh typed in
+what I need to type in.
+Um here we go. We've got click in the
+search box. So, these are all the tools
+it's using the type text Debbie codes. I
+ran a page sna snapshot to see like
+what's going on under when it puts in
+deb.codes codes. What's it getting back?
+Right, this is really cool. And then it
+clicked um the element was Debbie codes
+website link. So it was able to find me.
+I'm so glad that Google's able to find
+me. That's cool. Ran, press the key, run
+click, and excellent. Now it has a
+comprehensive understanding of the
+Debbie codes website based on my
+explanation. Here's what this website is
+about. Um so there we go. This is
+everything about me and about all my
+website. So that's just one thing that
+the Playright MCP server can do, but it
+can do many, many things. Anything that
+you can do in the browser, it can do.
+And if I just like bring that down a
+little bit, I can possibly bring this
+over. And you can see there that um
+there's the website it opened up. It
+even actually opened the about page to
+understand more about me. So that's kind
+of pretty cool. So just think about the
+things you can do there. That's the
+Playright MCP server.
+Um, if you're ever in doubt, of course,
+you can always just use agent mode and
+say, you know, how do I install the
+Playright MCP server? Uh, we let's let's
+give that a try, shall we? How do I
+I was a bit quick there, right? So, let
+me see. Did it actually um catch up on
+what I want to do. I'll help you install
+the player MCP model context protocol
+server based on what I saw on Debbie's
+website. is a powerful tool for AI
+assisted browser automation and testing.
+I love it. Let me check there was any
+existing MCB. So, it's going true and
+it's obviously going to see that I have
+it right. And it's installing there.
+Now, this is actually uh I just stopped
+it there. I shouldn't have but it was
+giving me option one, which is install
+the server globally, which is not what
+we want to do. Um but should we should
+have just let it go true. But basically,
+what I'm saying is that if you're
+watching this video and then you're
+like, "Oh, I need to go and click links
+and it like use the tools available to
+you, right? So use like agent mode and
+just keep asking the agent how do I do
+this? How do I do this? How do I do
+this? Instead of like think about the
+agent. I'm the I'm your agent. I'm your
+agent but it's the agent. U okay. So
+that's the playright MCP. Now we're
+going to move on to the playright test
+MCP server. What's the difference? Well,
+let's have a look in here. Now I've
+already got it installed. Um you will
+get this installed by actually running
+the command. I think it's called npx
+playright in an agent-loop equals VS
+code. Um that's check the docs um for
+the actual uh link. I'll put it in the
+description as well. But basically what
+you're doing is you're getting um this
+just comes here under the hood because
+this is included. This is what gets
+generated for you is av folder and
+inside an MCP.json JSON file and in here
+we've got the playright test MCP server
+and I've added this extra command, this
+extra arg here um headless so that the
+browser does not pop up each time I ask
+it to do something just because I want
+agents to work behind the scenes and not
+always be popping up and showing me
+stuff. But I could remove that if I
+needed to. Now it's also added in um an
+agents folder depending on the version
+you're using. It might be um a chat mode
+folder. Uh but the latest newest version
+which should be out very soon is going
+to be the agents folder. And that's what
+we are basically installing as agents.
+So here we've got the playright test
+generator agent, the healer agent, and
+the planner agent. Now these files are
+here and you can go ahead and read
+through them. It gives you a name, a
+description, the tools that it's allowed
+to use and the model. You could change
+the model if you wanted to. So that's up
+to you. This is just the one we think is
+better, but you could go ahead and put
+something else in there. And of course,
+this is generated for you. You could
+read all this if you want to. And you
+can also tweak it if you wanted to. Now,
+be careful because if you tweak it and
+you run that command again, it will
+install it will just rewrite the file,
+right, for you. So, it'll write
+overwrite everything that you've
+changed. But you can call it you could
+like you know duplicate this um and call
+it my for example
+um
+my playright test generator right
+and then in here you can add or the
+tools should you decide other tools are
+necessary I don't think so but should
+you decide for whatever reason um but
+you this is really important like to
+kind of not mess with how it's set up
+but maybe there's something else you
+want an add in here. You could totally
+do that. Just saying. Just leaving it
+there. Just leaving it there for you.
+But and we don't need to do this. I'm
+going to delete this. But I'm just
+letting you know that, you know, this is
+just a file that you can actually tweak
+to your own necessity should you be
+using a certain thing that you need to
+use that we are not covering in this. So
+you want to make it specifically your
+own. This is how you would do it. So my
+agents are there. That gets generated. I
+don't have to do anything with it. I can
+just leave it as it is. I can leave the
+MCP file as it is. And uh you've seen
+some of my videos if you haven't checked
+those on and how to use the seed file
+and how to how to do that. What I want
+to do is and let me just close this file
+here. I want to just have a chat with my
+agent. And you'll see now um down here I
+have playright test generator, playright
+test healer, and playright test planner.
+And I've got this other agent here, but
+don't worry about that for now. So for
+example, um we would normally start with
+a planner. So that's the agent that we
+would use. Now, if you are not sure of
+what this agent does, I mean, you can
+hover over it and it will give you a
+little thing, but you can basically just
+there? It didn't capture that. Hey, what
+Right? So, if you're unsure of what this
+agent does and you want a full
+explanation, this is I'm GitHub co-pilot
+and I'm currently running in playright
+test planner mode. In this mode, I'm
+specialized in creating comprehensive
+web application test plans using
+Playrite. And here's what I can do for
+you. Web analysis applica um application
+analysis, test planning and design, test
+documentation, quality assurance, focus,
+and I can help you create thorough test
+plans for web applications by exploring
+them interactively and documenting
+comprehensive test scenarios that
+development and QA teams can follow.
+Would you like me to analyze a specific
+web application and create a test plan
+for it? And then you can go ahead and do
+that if you want to. So you can kind of
+run this with all these um tools. Let's
+like take healer for example.
+What do you do? Let's just type it in
+because I'm a little bit faster than
+speaking. Uh I'm again copilot. My prim
+is to debug and fix broken playright
+tests. Here's what I do. I run test
+suites to identify failing tests. I
+debug individualize failing test step by
+step. Analyze error messages um etc etc.
+So you can read all this about what it
+does. Now look at this. I mark
+problematic tests as test off. Fix me if
+needed and I document fixes and
+reasoning. So this is really cool. I
+work systematically and autonomously. I
+don't ask questions. I analyze the
+situation, implement the most reasonable
+fixes to get your test passing and I
+focus on creating maintainable robust
+solutions rather than quick hacks. Would
+you like me to analyze and fix any
+failing playright tests? So again, this
+is really cool. Keep asking the agent
+questions like what do you do? How can I
+improve this? You know, you you could
+write a prompt and then even say like is
+this prompt good enough? Can how can I
+improve this prompt? Right now we were
+talking about what's the difference
+between these MCP servers. Let's take a
+look at the tools to understand. So if I
+look at the playright test MCP server,
+uh you can see that there are some
+things checked and some things not
+checked. That's because these agents
+have some tools specifically allocated
+to them and other tools not. For
+example, the healer doesn't need um to
+click or close, but it needs the console
+messages because it's debugging. It
+doesn't need to drag, but it needs to
+evaluate. It doesn't need to upload a
+file or fill out a form, but it needs to
+generate a locator. So, these are the
+tools that it has available to it.
+Think, look at this. Hover install,
+mouse click, mouse drag, uh navigate
+back, network requests, returns all
+network requests since loading the page.
+Very important, especially for
+debugging. Uh resize, select option,
+snapshot, start tracing, stop tracing.
+So we can trace as well. Um we got tabs,
+you got take screenshots, uh type,
+verify an element is visible, verify
+list visible, verify text visible,
+verify value, wait for load, log, setup
+page, write test, and uh the planner
+setup page. Then you got test, debug,
+test list, and test run. So again, if I
+went ahead and just changed that. Now,
+don't like tweak this because it might
+just go ahead and change it for you. You
+don't want that. But click on generator
+and then I can just you know modify have
+a look at the tools that are available
+under under this one right so you can
+see there are a couple of different
+tools now added in here um and that's
+basically what you want to be checking
+or what you want to you want to
+understand what's going on right now you
+don't have to do anything here I'm just
+explaining things so that you know how
+it works so that when you go to your
+head of engineering head of QA head of
+whatever and you're asking can I use
+this MCP server ever so that you know
+the tools that are available to you,
+what is included and what is not
+included and what is the difference
+between one and the other. So I hope
+this kind of explains it a little bit.
+The playright test MCB server is
+specifically made for testing. So if you
+want to test your application, if you
+want to generate test plans, if you want
+to um generate tests, if you want to
+heal some tests, fix and debug tests,
+that's the MCP server that you want to
+use. Now, this is only available for
+TypeScript. So, at the moment that this
+video is being created, it's only
+available for TypeScript at the moment.
+Um, I'm not sure what the road map is
+for other languages, but check GitHub
+issues for that. Um, but if you are
+writing code in other languages, then I
+would recommend you use the Playright
+MCP server, which doesn't have as many
+tools as the test server when it comes
+to testing. But uh you can still you
+know be quite productive um with testing
+with other languages using the Playright
+MCP server. So that is basically it. I
+hope that makes it clear. If you're
+going to ask you know why is this here
+for example and the Playright MCP server
+not here that's because this is local
+because we've installed this. This is
+local to this workspace. So I'm not
+going to if I open up another workspace
+I'm not going to find that server
+installed. So when I run that command
+from the docs, it's going to add this
+file in here and it makes it specific to
+this workspace only to this project
+only. So I will not find it across
+others. Whereas when I install playright
+MCB server, I can install it globally
+across all my repos and then I just
+always have it available. And again, you
+could choose to not do that and just add
+it in here if you wanted to.
+Um, I hope that explains things a little
+bit better. Um, but it is really really
+cool what I can do. Like I can, you
+know, I have a load of tests in here.
+Um, this is the movies rapper. So I can
+actually go to agent mode. I'm just
+going to play around here for a couple
+of seconds before we say goodbye. Let's
+do this. Um,
+let's open up a new chat and let's just
+say uh what is the um
+GitHub URL for this rapper
+for example? Um this is a playright
+movies app that I've created just for
+playing around uh with things so that
+you can have a good idea. So I do all my
+kind of testing in this website. So this
+is the URL github.com debs-obrian
+playwright movies app. Um the repository
+name is playwright movies app and it's
+under debs O'Brien. So check that out on
+GitHub if you want to um check that out.
+And I can say how many tests do I have?
+For example, um I'll check how many
+tests you have in your playright test
+suite and it's going to do npx playright
+test list to do that. Based on the
+playright test listing, you have 107
+tests across 72 uh test files. That's
+pretty impressive. Um now let's see if I
+can answer this. How many of these tests
+were created
+by an agent?
+Um, so to determine if a test is created
+by an age, I need to examine the test
+files. So it's going to do that and it's
+going to search to the reax agent and
+search the git history. And this is
+pretty kind of cool. Um, and I I reckon
+there's probably quite a lot in there.
+I've actually put in a tag um in there.
+I'm going to see if it's going to find
+that. But what's really cool is that you
+can actually then tag them and say these
+were done by the agent. These were done
+by me. And you can just keep using agent
+mode to just like find out things, ask
+things, especially when you go to a new
+project uh and and find out um like
+what's going on in this project? Are
+these these created? So basically the
+agent generated test summary, the total
+test created by agents were 75 plus
+tests. And here's the breakdown. This is
+pretty cool, right? Uh the initial agent
+generated tests, uh the one comma, six
+tests, and the comprehensive agent
+generated tests, 69 tests. This is so
+true. This actually took a hell of a
+long time. time I went through it one by
+one by one and then finally made a big
+mass of PR and and again this is totally
+open source you can go totally check
+that out and the final test fixes by the
+healer agent were nine tests um so
+that's really really cool so um out of
+107 tests approximately 70 to 75% were
+created by AI agents
+now you can be the decider of are those
+tests good or not uh to me they are
+there I think they're great I've I've
+been playing around with this a hell of
+a lot with these agents um before that I
+I was using just the playright MCP
+server to create the test but I find the
+test uh MCP server so the agents do a
+much better job. Um all those tests are
+here. What you do when you need to
+manage those tests I would use the um UI
+mode to do that. So we can open up a
+terminal. Um and I'm going off track a
+little bit but that's okay. MPX playride
+test-ui.
+Um, and that will open up a UI um, inter
+user interface here with all the tests
+that I have available. So I can quickly
+like read through it. And you see I've
+put agent tags on the test that I've,
+you know, created by the agent. Um, and
+I can go ahead and just run all those
+tests. So I can search for only the
+agent ones, etc. Um, and press play, run
+them all and and then go through them
+one by one and see how things are. Um,
+that's how I check through all um my
+agents work. After it's done, I let it
+go ahead do things in the background.
+Obviously, I'm running the three agents
+one after the other. Let's have a look
+at this one here that's been generated.
+That's finished running. And you can see
+um and go through as a user would do.
+This looks good. It went in there. It
+did this. And actually can see the
+source code as well. Uh expecting it to
+be visible and the page list it went to,
+etc. So that's uh that's it for this
+video. Um
+now that you have a clear idea of which
+Playright MCP server you are using or
+you should be using or could be using um
+I challenge you to go ahead and give
+them a try. Um depending on your use
+case. Check out my previous videos for
+all other cool things you can do with
+Playright MCP servers and with Playright
+agents. And happy testing everyone. Have
